@@ -9,6 +9,6 @@
 #include "../globals.h"
 #include <stdlib.h>
 
-void print_killed_child_process();
+void print_finished_bgprocess();
 
 #endif //MY_SHELL_BGPROCESS_H

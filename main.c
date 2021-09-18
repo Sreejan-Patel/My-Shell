@@ -14,7 +14,7 @@ int main() {
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "EndlessLoop"
     while(!0){
-        print_killed_child_process();
+        print_finished_bgprocess();
         prompt_print();
 
         char temp;
