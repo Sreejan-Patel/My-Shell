@@ -417,6 +417,30 @@ utils/inputmat.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/inputmat.c.s
 .PHONY : utils/inputmat.c.s
 
+utils/processmat.o: utils/processmat.c.o
+.PHONY : utils/processmat.o
+
+# target to build an object file
+utils/processmat.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/processmat.c.o
+.PHONY : utils/processmat.c.o
+
+utils/processmat.i: utils/processmat.c.i
+.PHONY : utils/processmat.i
+
+# target to preprocess a source file
+utils/processmat.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/processmat.c.i
+.PHONY : utils/processmat.c.i
+
+utils/processmat.s: utils/processmat.c.s
+.PHONY : utils/processmat.s
+
+# target to generate assembly for a file
+utils/processmat.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/processmat.c.s
+.PHONY : utils/processmat.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -462,6 +486,9 @@ help:
 	@echo "... utils/inputmat.o"
 	@echo "... utils/inputmat.i"
 	@echo "... utils/inputmat.s"
+	@echo "... utils/processmat.o"
+	@echo "... utils/processmat.i"
+	@echo "... utils/processmat.s"
 .PHONY : help
 
 

@@ -147,6 +147,12 @@
 		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/inputmat.h">
 			<Option target="My_Shell"/>
 		</Unit>
+		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/processmat.c">
+			<Option target="My_Shell"/>
+		</Unit>
+		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/processmat.h">
+			<Option target="My_Shell"/>
+		</Unit>
 		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
