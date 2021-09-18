@@ -311,11 +311,25 @@ void ls_l(char* path,int flag_a){
 
                 printf("\t%lld\t", buffer.st_size);
 
-                char *time = ctime(&buffer.st_mtime);
-                char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
-                strncpy(time_stamp,time+4,12);
-                printf("%s ",time_stamp);
-                free(time_stamp);
+                long int time0;
+                time(&time0);
+                long int time1 = buffer.st_mtime;
+                long double sec = difftime(time0,time1);
+                if(sec >= 15636400){
+                    char *time = ctime(&buffer.st_mtime);
+                    char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
+                    strncpy(time_stamp,time+4,6);
+                    strncat(time_stamp,time+19,5);
+                    printf("%s\t",time_stamp);
+                    free(time_stamp);
+                }
+                else {
+                    char *time = ctime(&buffer.st_mtime);
+                    char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
+                    strncpy(time_stamp,time+4,12);
+                    printf("%s\t",time_stamp);
+                    free(time_stamp);
+                }
 
                 printf("%s\n",input_dir->d_name);
             }
@@ -396,11 +410,25 @@ void ls_l(char* path,int flag_a){
 
             printf("\t%lld\t", buffer.st_size);
 
-            char *time = ctime(&buffer.st_mtime);
-            char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
-            strncpy(time_stamp,time+4,12);
-            printf("%s ",time_stamp);
-            free(time_stamp);
+            long int time0;
+            time(&time0);
+            long int time1 = buffer.st_mtime;
+            long double sec = difftime(time0,time1);
+            if(sec >= 15636400){
+                char *time = ctime(&buffer.st_mtime);
+                char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
+                strncpy(time_stamp,time+4,6);
+                strncat(time_stamp,time+19,5);
+                printf("%s\t",time_stamp);
+                free(time_stamp);
+            }
+            else {
+                char *time = ctime(&buffer.st_mtime);
+                char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
+                strncpy(time_stamp,time+4,12);
+                printf("%s\t",time_stamp);
+                free(time_stamp);
+            }
 
             printf("%s\n",input_dir->d_name);
         }

@@ -31,7 +31,6 @@ void print_finished_bgprocess() {
             if (WIFEXITED(status) && WEXITSTATUS(status) == EXIT_SUCCESS) {
                 printf("%s with pid %d exited normally with status %d\n", current_process->name, current_process->pid,WEXITSTATUS(status));
                 free(current_process);
-                free(prev_process);
                 return;
             }
         }
