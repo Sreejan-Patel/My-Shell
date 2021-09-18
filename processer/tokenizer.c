@@ -70,27 +70,30 @@ void execute(token_mat arg){
         if(child == -1){
             perror("Error, Could not fork child! ");
         }
-        else if(child == 0){
+        else if(child == 0) {
             // child process
-            if(is_bg){
-                setpgid(0,0);
+            if (is_bg) {
+                setpgid(0, 0);
             }
+
             int i;
             char *temp[MAX_TOKENS];
-            for(i = 0 ; i < MAX_TOKENS ; i++){
-                if(arg.args[i] != NULL){
+            for (i = 0; i < MAX_TOKENS; i++) {
+                if (arg.args[i] != NULL) {
                     temp[i] = arg.args[i];
-                }
-                else
+                } else
                     break;
             }
-            temp[i+1] = NULL;
+            temp[i] = NULL;
 
-            if(is_bg){
-                temp[i] = NULL;
+            if (is_bg) {
+                temp[i-1] = NULL;
+                if (execvp(temp[0], temp) < 0) //If the command does not exist
+                    perror("Error execvp! ");
             }
-            if (execvp(temp[0], temp) < 0) //If the command does not exist
-                perror("Error execvp! ");
+            else
+                if (execvp(temp[0], temp) < 0) //If the command does not exist
+                    perror("Error execvp! ");
 
         }
         else {
