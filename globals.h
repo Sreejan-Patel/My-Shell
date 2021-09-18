@@ -1,0 +1,24 @@
+#ifndef MY_SHELL_GLOBALS_H
+#define MY_SHELL_GLOBALS_H
+
+#include <stdio.h>
+
+#define MAX_TOKEN_LENGTH 100
+#define MAX_TOKENS 20
+#define MAX_PATH_LENGTH 100
+
+extern char *shell_path;
+extern char *prev_path;
+extern char *shell;
+extern char *user_name;
+extern char *system_name;
+extern char *curr_path;
+extern struct process *running;
+
+extern unsigned int shell_path_length;
+extern int in_shell;
+extern int is_bg;
+typedef struct arg_mat token_mat;
+typedef struct process process;
+
+#endif //MY_SHELL_GLOBALS_H

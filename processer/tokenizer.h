@@ -1,0 +1,26 @@
+#ifndef MY_SHELL_TOKENIZER_H
+#define MY_SHELL_TOKENIZER_H
+
+#include "../utils/files.h"
+#include "../globals.h"
+#include <stdlib.h>
+#include "../utils/inputmat.h"
+#include "../commands/echo.h"
+#include "../commands/pwd.h"
+#include "../commands/cd.h"
+#include "../commands/ls.h"
+#include "bgprocess.h"
+
+
+struct process
+{
+    char pname[128];
+    int pid;
+    struct process *next;
+};
+
+void tokenize_input(char *input);
+void tokenize(token_mat args_mat);
+void execute(token_mat arg);
+
+#endif //MY_SHELL_TOKENIZER_H
