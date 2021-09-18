@@ -1,62 +1,46 @@
 #include "bgprocess.h"
 
-/**
- * Display the name and pid of all children killed or stopped within the next execution of the command
- * Runs on pressing enter
- */
+void print_killed_child_process() {
 
-
-void print_proc_details(process *proc, int status)
-{
-    char buffer[MAX_TOKEN_LENGTH];
-    if (WIFEXITED(status))
-        sprintf(buffer, "%s with pid %d exited normally with status %d", proc->pname, proc->pid, WEXITSTATUS(status));
-    else
-        sprintf(buffer, "%s with pid %d exited abnormally with error status %d", proc->pname, proc->pid, WEXITSTATUS(status));
-    print_n(buffer);
-}
-
-void display_killed_children()
-{
     int pid, status;
-    while (1)
-    {
-        pid = waitpid(-1, &status, WNOHANG | WUNTRACED); //WNOHANG is for killed children; WUNTRACED is for stopped children
+    while (1) {
+        pid = waitpid(-1, &status,
+                      WNOHANG | WUNTRACED); //WNOHANG is for killed children; WUNTRACED is for stopped children
         if (pid <= 0)
-            break;
-        if (WIFEXITED(status) || WIFSIGNALED(status))
-        {
-            process *prev_proc = running, *current_proc = running;
-            if (current_proc != NULL && current_proc->pid == pid)
-            {
+            return;
+
+        if (WIFEXITED(status) || WIFSIGNALED(status)) {
+            process *prev_process;
+            prev_process = malloc(sizeof(process));
+            prev_process = running;
+            process *current_process;
+            current_process = malloc(sizeof(process));
+            current_process = running;
+
+            if (current_process != NULL && current_process->pid == pid) {
                 running = running->next;
-                print_proc_details(current_proc, status);
-                free(current_proc);
-                return;
+                if (WIFEXITED(status) && WEXITSTATUS(status) == EXIT_SUCCESS) {
+                    printf("%s with pid %d exited normally with status %d\n", current_process->name, current_process->pid, WEXITSTATUS(status));
+                    free(current_process);
+                    return;
+                }
             }
-            while (current_proc != NULL && current_proc->pid != pid)
-            {
-                prev_proc = current_proc;
-                current_proc = current_proc->next;
+            while (current_process != NULL && current_process->pid != pid) {
+                prev_process = current_process;
+                current_process = current_process->next;
             }
-            if (current_proc != NULL)
-            {
-                prev_proc->next = current_proc->next;
-                print_proc_details(current_proc, status);
-                free(current_proc);
-                return;
+            if (current_process != NULL) {
+                prev_process->next = current_process->next;
+                if (WIFEXITED(status) && WEXITSTATUS(status) == EXIT_SUCCESS) {
+                    printf("%s with pid %d exited normally with status %d\n", current_process->name, current_process->pid,
+                           WEXITSTATUS(status));
+                    free(current_process);
+                    return;
+                }
             }
+
         }
     }
 }
 
-void print_n(char *s)
-{
-    print(s);
-    print("\n");
-}
 
-void print(char *s)
-{
-    write(1, s, strlen(s));
-}

@@ -48,6 +48,24 @@ fcntl.h
 errno.h
 -
 
+/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.c
+execvp.h
+/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.h
+
+/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.h
+../utils/files.h
+/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/files.h
+../utils/inputmat.h
+/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/inputmat.h
+../globals.h
+/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/globals.h
+../processer/tokenizer.h
+/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/tokenizer.h
+unistd.h
+-
+stdlib.h
+-
+
 /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.c
 ls.h
 /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.h
@@ -173,6 +191,8 @@ stdlib.h
 /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.h
 bgprocess.h
 /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/bgprocess.h
+../commands/execvp.h
+/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.h
 
 /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/files.h
 unistd.h

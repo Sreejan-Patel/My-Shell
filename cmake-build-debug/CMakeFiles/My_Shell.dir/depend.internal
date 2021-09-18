@@ -5,6 +5,7 @@ CMakeFiles/My_Shell.dir/commands/cd.c.o
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/cd.c
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/cd.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/echo.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pwd.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/globals.h
@@ -17,6 +18,20 @@ CMakeFiles/My_Shell.dir/commands/echo.c.o
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/cd.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/echo.c
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/echo.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pwd.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/globals.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/bgprocess.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/prompt.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/tokenizer.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/files.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/inputmat.h
+CMakeFiles/My_Shell.dir/commands/execvp.c.o
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/cd.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/echo.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.c
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pwd.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/globals.h
@@ -28,6 +43,7 @@ CMakeFiles/My_Shell.dir/commands/echo.c.o
 CMakeFiles/My_Shell.dir/commands/ls.c.o
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/cd.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/echo.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.c
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pwd.h
@@ -40,6 +56,7 @@ CMakeFiles/My_Shell.dir/commands/ls.c.o
 CMakeFiles/My_Shell.dir/commands/pwd.c.o
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/cd.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/echo.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pwd.c
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pwd.h
@@ -55,6 +72,7 @@ CMakeFiles/My_Shell.dir/globals.c.o
 CMakeFiles/My_Shell.dir/main.c.o
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/cd.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/echo.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pwd.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/globals.h
@@ -67,6 +85,7 @@ CMakeFiles/My_Shell.dir/main.c.o
 CMakeFiles/My_Shell.dir/processer/bgprocess.c.o
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/cd.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/echo.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pwd.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/globals.h
@@ -84,6 +103,7 @@ CMakeFiles/My_Shell.dir/processer/prompt.c.o
 CMakeFiles/My_Shell.dir/processer/tokenizer.c.o
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/cd.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/echo.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pwd.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/globals.h
@@ -100,6 +120,7 @@ CMakeFiles/My_Shell.dir/utils/files.c.o
 CMakeFiles/My_Shell.dir/utils/inputmat.c.o
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/cd.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/echo.h
+ /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pwd.h
  /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/globals.h

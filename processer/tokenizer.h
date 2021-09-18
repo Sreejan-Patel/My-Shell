@@ -10,14 +10,7 @@
 #include "../commands/cd.h"
 #include "../commands/ls.h"
 #include "bgprocess.h"
-
-
-struct process
-{
-    char pname[128];
-    int pid;
-    struct process *next;
-};
+#include "../commands/execvp.h"
 
 void tokenize_input(char *input);
 void tokenize(token_mat args_mat);

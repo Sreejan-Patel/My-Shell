@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/cd.c" "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles/My_Shell.dir/commands/cd.c.o"
   "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/echo.c" "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles/My_Shell.dir/commands/echo.c.o"
+  "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.c" "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles/My_Shell.dir/commands/execvp.c.o"
   "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.c" "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles/My_Shell.dir/commands/ls.c.o"
   "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pwd.c" "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles/My_Shell.dir/commands/pwd.c.o"
   "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/globals.c" "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles/My_Shell.dir/globals.c.o"

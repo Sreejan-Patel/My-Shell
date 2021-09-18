@@ -177,6 +177,30 @@ commands/echo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/commands/echo.c.s
 .PHONY : commands/echo.c.s
 
+commands/execvp.o: commands/execvp.c.o
+.PHONY : commands/execvp.o
+
+# target to build an object file
+commands/execvp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/commands/execvp.c.o
+.PHONY : commands/execvp.c.o
+
+commands/execvp.i: commands/execvp.c.i
+.PHONY : commands/execvp.i
+
+# target to preprocess a source file
+commands/execvp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/commands/execvp.c.i
+.PHONY : commands/execvp.c.i
+
+commands/execvp.s: commands/execvp.c.s
+.PHONY : commands/execvp.s
+
+# target to generate assembly for a file
+commands/execvp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/commands/execvp.c.s
+.PHONY : commands/execvp.c.s
+
 commands/ls.o: commands/ls.c.o
 .PHONY : commands/ls.o
 
@@ -408,6 +432,9 @@ help:
 	@echo "... commands/echo.o"
 	@echo "... commands/echo.i"
 	@echo "... commands/echo.s"
+	@echo "... commands/execvp.o"
+	@echo "... commands/execvp.i"
+	@echo "... commands/execvp.s"
 	@echo "... commands/ls.o"
 	@echo "... commands/ls.i"
 	@echo "... commands/ls.s"

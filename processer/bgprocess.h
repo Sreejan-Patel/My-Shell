@@ -9,9 +9,6 @@
 #include "../globals.h"
 #include <stdlib.h>
 
-void display_killed_children();
-void print_proc_details(process *proc, int status);
-void print_n(char *s);
-void print(char *s);
+void print_killed_child_process();
 
 #endif //MY_SHELL_BGPROCESS_H
