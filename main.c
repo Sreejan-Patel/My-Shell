@@ -15,8 +15,15 @@ int main() {
 #pragma ide diagnostic ignored "EndlessLoop"
     while(!0){
         print_finished_bgprocess();
-        prompt_print();
 
+        // check if any bg processes are still running
+        if(strcmp(run[0]->name,"\0") == 0){
+            is_bg = 0;
+        }
+        prompt_print();     //prints prompt
+
+
+        // take input
         char temp;
         char *input;
         input = (char*) malloc(sizeof(char)*MAX_TOKEN_LENGTH);

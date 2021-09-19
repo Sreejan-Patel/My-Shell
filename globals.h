@@ -3,9 +3,9 @@
 
 #include <stdio.h>
 
-#define MAX_TOKEN_LENGTH 100
-#define MAX_TOKENS 20
-#define MAX_PATH_LENGTH 100
+#define MAX_TOKEN_LENGTH 1000
+#define MAX_TOKENS 50
+#define MAX_PATH_LENGTH 1000
 
 extern char *shell_path;
 extern char *prev_path;

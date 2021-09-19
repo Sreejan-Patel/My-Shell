@@ -1,5 +1,7 @@
 #include "bgprocess.h"
-
+/*
+    -print_finished_bgprocess() prints the info of finished bgprocess
+*/
 void print_finished_bgprocess(){
     int pid, status;
 

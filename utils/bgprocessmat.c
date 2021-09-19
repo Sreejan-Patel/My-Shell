@@ -1,5 +1,7 @@
 #include "bgprocessmat.h"
 
+// creates a array of pointer to struct process , which store the name and pid of the bgprocess
+
 void make_bgprocess_mat(){
 
     process **p;

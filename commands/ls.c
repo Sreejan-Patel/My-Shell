@@ -1,5 +1,7 @@
 #include "ls.h"
 
+// executes the commands ls with many of it's flags
+
 void command_ls(token_mat arg){
     int flag_l = 0;
     int flag_a = 0;
@@ -107,6 +109,8 @@ void command_ls(token_mat arg){
 
 }
 
+// checks the dir and calls for the req functions i.e ls_l or ls
+
 void dir_arg(char* arg,int flag_a,int flag_l,int flag_la){
 
     struct dirent **namelist;
@@ -191,6 +195,8 @@ void dir_arg(char* arg,int flag_a,int flag_l,int flag_la){
     }
 }
 
+// executes ls with/without -a
+
 void ls(char* path,int flag_a){
     struct dirent **namelist;
     int n;
@@ -218,6 +224,7 @@ void ls(char* path,int flag_a){
     }
 }
 
+// executes ls with -l flag and with/without -a flag
 
 void ls_l(char* path,int flag_a){
     DIR *dir = opendir(path);
@@ -438,6 +445,8 @@ void ls_l(char* path,int flag_a){
 
 }
 
+// gets the total block size
+
 long long int get_block_size(char* directory) {
     long long int size = 0;
 
@@ -447,8 +456,7 @@ long long int get_block_size(char* directory) {
     d = opendir(directory);
     if (d) {
         while ((dir = readdir(d)) != NULL) {
-            if (dir->d_name[0] != '.') { // Ignore hidden files
-                // Create the path to stat
+            if (dir->d_name[0] != '.') {                                // Ignore hidden files
                 char info_path[MAX_TOKEN_LENGTH + 1];
                 strcpy(info_path, directory);
                 if (directory[strlen(directory) - 1] != '/')

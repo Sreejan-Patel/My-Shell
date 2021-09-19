@@ -7,6 +7,10 @@
 #include "../utils/inputmat.h"
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
+#include <fcntl.h>
+#include <libproc.h>
+#include <sys/proc_info.h>
 
 void command_pinfo(token_mat arg);
 

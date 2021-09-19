@@ -1,5 +1,15 @@
 #include "files.h"
 
+/*
+consists of the following -
+    -clearscreen : clears the terminal screen
+    -get_user_name : gets the username operating the system
+    -get_system_name : gets the systemname
+    -get_curr_path() : gets the current path
+    -get_relative_path() : gets the relative path w.r.t shell path
+*/
+
+
 void clear_screen(){
     const char *CLEAR_SCREEN_ANSI = "\e[1;1H\e[2J";
     write(STDOUT_FILENO, CLEAR_SCREEN_ANSI, strlen(CLEAR_SCREEN_ANSI));
@@ -9,7 +19,6 @@ char* get_user_name(){
     user_name = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
     struct passwd *user = getpwuid(getuid());
     strcpy(user_name,user->pw_name);
-
 
     return user_name;
 }
@@ -51,7 +60,7 @@ char* get_relative_path(char* current_path){
     char* relative_path;
     relative_path = malloc(sizeof(char)*MAX_PATH_LENGTH);
 
-    int match;
+    int match = 0;
     int flag = 0;
     unsigned int current_path_length = strlen(current_path);
     for (int i = 0; i < shell_path_length && i < current_path_length; i++) {

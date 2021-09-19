@@ -1,5 +1,7 @@
 #include "execvp.h"
 
+// executes the non-builtin commands and bg processes
+
 void command_execvp(token_mat arg){
 
     if(strcmp(arg.args[arg.num_args],"&") == 0) {
