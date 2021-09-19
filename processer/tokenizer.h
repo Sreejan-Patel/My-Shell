@@ -11,6 +11,7 @@
 #include "../commands/ls.h"
 #include "bgprocess.h"
 #include "../commands/execvp.h"
+#include "../commands/pinfo.h"
 
 void tokenize_input(char *input);
 void tokenize(token_mat args_mat);

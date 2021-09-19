@@ -222,18 +222,18 @@ CMakeFiles/My_Shell.dir/commands/execvp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/My_Shell.dir/commands/execvp.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.c -o CMakeFiles/My_Shell.dir/commands/execvp.c.s
 
-CMakeFiles/My_Shell.dir/utils/processmat.c.o: CMakeFiles/My_Shell.dir/flags.make
-CMakeFiles/My_Shell.dir/utils/processmat.c.o: ../utils/processmat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/My_Shell.dir/utils/processmat.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/My_Shell.dir/utils/processmat.c.o -c /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/processmat.c
+CMakeFiles/My_Shell.dir/commands/pinfo.c.o: CMakeFiles/My_Shell.dir/flags.make
+CMakeFiles/My_Shell.dir/commands/pinfo.c.o: ../commands/pinfo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/My_Shell.dir/commands/pinfo.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/My_Shell.dir/commands/pinfo.c.o -c /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pinfo.c
 
-CMakeFiles/My_Shell.dir/utils/processmat.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/My_Shell.dir/utils/processmat.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/processmat.c > CMakeFiles/My_Shell.dir/utils/processmat.c.i
+CMakeFiles/My_Shell.dir/commands/pinfo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/My_Shell.dir/commands/pinfo.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pinfo.c > CMakeFiles/My_Shell.dir/commands/pinfo.c.i
 
-CMakeFiles/My_Shell.dir/utils/processmat.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/My_Shell.dir/utils/processmat.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/processmat.c -o CMakeFiles/My_Shell.dir/utils/processmat.c.s
+CMakeFiles/My_Shell.dir/commands/pinfo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/My_Shell.dir/commands/pinfo.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pinfo.c -o CMakeFiles/My_Shell.dir/commands/pinfo.c.s
 
 # Object files for target My_Shell
 My_Shell_OBJECTS = \
@@ -249,7 +249,7 @@ My_Shell_OBJECTS = \
 "CMakeFiles/My_Shell.dir/commands/ls.c.o" \
 "CMakeFiles/My_Shell.dir/processer/bgprocess.c.o" \
 "CMakeFiles/My_Shell.dir/commands/execvp.c.o" \
-"CMakeFiles/My_Shell.dir/utils/processmat.c.o"
+"CMakeFiles/My_Shell.dir/commands/pinfo.c.o"
 
 # External object files for target My_Shell
 My_Shell_EXTERNAL_OBJECTS =
@@ -266,7 +266,7 @@ My_Shell: CMakeFiles/My_Shell.dir/commands/cd.c.o
 My_Shell: CMakeFiles/My_Shell.dir/commands/ls.c.o
 My_Shell: CMakeFiles/My_Shell.dir/processer/bgprocess.c.o
 My_Shell: CMakeFiles/My_Shell.dir/commands/execvp.c.o
-My_Shell: CMakeFiles/My_Shell.dir/utils/processmat.c.o
+My_Shell: CMakeFiles/My_Shell.dir/commands/pinfo.c.o
 My_Shell: CMakeFiles/My_Shell.dir/build.make
 My_Shell: CMakeFiles/My_Shell.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable My_Shell"

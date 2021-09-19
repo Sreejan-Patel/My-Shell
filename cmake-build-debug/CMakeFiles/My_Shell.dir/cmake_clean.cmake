@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/My_Shell.dir/commands/echo.c.o"
   "CMakeFiles/My_Shell.dir/commands/execvp.c.o"
   "CMakeFiles/My_Shell.dir/commands/ls.c.o"
+  "CMakeFiles/My_Shell.dir/commands/pinfo.c.o"
   "CMakeFiles/My_Shell.dir/commands/pwd.c.o"
   "CMakeFiles/My_Shell.dir/globals.c.o"
   "CMakeFiles/My_Shell.dir/main.c.o"
@@ -11,7 +12,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/My_Shell.dir/processer/tokenizer.c.o"
   "CMakeFiles/My_Shell.dir/utils/files.c.o"
   "CMakeFiles/My_Shell.dir/utils/inputmat.c.o"
-  "CMakeFiles/My_Shell.dir/utils/processmat.c.o"
   "My_Shell"
   "My_Shell.pdb"
 )
