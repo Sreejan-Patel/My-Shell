@@ -393,6 +393,30 @@ processer/tokenizer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/tokenizer.c.s
 .PHONY : processer/tokenizer.c.s
 
+utils/bgprocessmat.o: utils/bgprocessmat.c.o
+.PHONY : utils/bgprocessmat.o
+
+# target to build an object file
+utils/bgprocessmat.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/bgprocessmat.c.o
+.PHONY : utils/bgprocessmat.c.o
+
+utils/bgprocessmat.i: utils/bgprocessmat.c.i
+.PHONY : utils/bgprocessmat.i
+
+# target to preprocess a source file
+utils/bgprocessmat.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/bgprocessmat.c.i
+.PHONY : utils/bgprocessmat.c.i
+
+utils/bgprocessmat.s: utils/bgprocessmat.c.s
+.PHONY : utils/bgprocessmat.s
+
+# target to generate assembly for a file
+utils/bgprocessmat.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/bgprocessmat.c.s
+.PHONY : utils/bgprocessmat.c.s
+
 utils/files.o: utils/files.c.o
 .PHONY : utils/files.o
 
@@ -483,6 +507,9 @@ help:
 	@echo "... processer/tokenizer.o"
 	@echo "... processer/tokenizer.i"
 	@echo "... processer/tokenizer.s"
+	@echo "... utils/bgprocessmat.o"
+	@echo "... utils/bgprocessmat.i"
+	@echo "... utils/bgprocessmat.s"
 	@echo "... utils/files.o"
 	@echo "... utils/files.i"
 	@echo "... utils/files.s"

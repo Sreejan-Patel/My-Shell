@@ -10,6 +10,8 @@ void initialize(){
     prev_path = (char*)malloc(sizeof(char)*MAX_PATH_LENGTH);
     getcwd(prev_path,MAX_PATH_LENGTH);
 
+    make_bgprocess_mat();
+
 }
 
 void prompt_print(){

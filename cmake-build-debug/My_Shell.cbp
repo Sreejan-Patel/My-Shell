@@ -141,6 +141,12 @@
 		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/tokenizer.h">
 			<Option target="My_Shell"/>
 		</Unit>
+		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/bgprocessmat.c">
+			<Option target="My_Shell"/>
+		</Unit>
+		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/bgprocessmat.h">
+			<Option target="My_Shell"/>
+		</Unit>
 		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/files.c">
 			<Option target="My_Shell"/>
 		</Unit>

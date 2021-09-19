@@ -13,12 +13,13 @@ extern char *shell;
 extern char *user_name;
 extern char *system_name;
 extern char *curr_path;
-extern struct process *running;
 
 extern unsigned int shell_path_length;
 extern int in_shell;
 extern int is_bg;
 typedef struct arg_mat token_mat;
+
 typedef struct process process;
+extern struct process **run;
 
 #endif //MY_SHELL_GLOBALS_H

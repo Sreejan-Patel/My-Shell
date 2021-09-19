@@ -8,13 +8,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-struct process
-{
-    char name[MAX_TOKEN_LENGTH];
-    int pid;
-    struct process *next;
-};
-
 void command_execvp(token_mat arg);
 
 

@@ -49,12 +49,15 @@ void command_execvp(token_mat arg){
         if (!is_bg)
             waitpid(child, &i, WUNTRACED); //if it is not a background process, wait, till it gets over
         else {
-            process *x;
-            x = malloc(sizeof(process));
-            strcpy(x->name, arg.args[0]);
-            x->pid = child;
-            x->next = running;
-            running = x;
+            for(int j = 0 ; j < MAX_TOKENS ; j++){
+                if(run[j]->name[0] == '\0'){
+                    strcpy(run[j]->name,arg.args[0]);
+                    run[j]->pid = child;
+                    break;
+                }
+                else
+                    continue;
+            }
             printf("%d\n",child);
         }
     }

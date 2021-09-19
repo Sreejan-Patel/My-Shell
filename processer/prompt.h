@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include "../globals.h"
 #include "../utils/files.h"
+#include "../utils/bgprocessmat.h"
 #include <stdlib.h>
 #include <unistd.h>
 #include <pwd.h>
