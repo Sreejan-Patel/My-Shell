@@ -369,6 +369,30 @@ processer/prompt.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/prompt.c.s
 .PHONY : processer/prompt.c.s
 
+processer/redirections.o: processer/redirections.c.o
+.PHONY : processer/redirections.o
+
+# target to build an object file
+processer/redirections.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/redirections.c.o
+.PHONY : processer/redirections.c.o
+
+processer/redirections.i: processer/redirections.c.i
+.PHONY : processer/redirections.i
+
+# target to preprocess a source file
+processer/redirections.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/redirections.c.i
+.PHONY : processer/redirections.c.i
+
+processer/redirections.s: processer/redirections.c.s
+.PHONY : processer/redirections.s
+
+# target to generate assembly for a file
+processer/redirections.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/redirections.c.s
+.PHONY : processer/redirections.c.s
+
 processer/tokenizer.o: processer/tokenizer.c.o
 .PHONY : processer/tokenizer.o
 
@@ -504,6 +528,9 @@ help:
 	@echo "... processer/prompt.o"
 	@echo "... processer/prompt.i"
 	@echo "... processer/prompt.s"
+	@echo "... processer/redirections.o"
+	@echo "... processer/redirections.i"
+	@echo "... processer/redirections.s"
 	@echo "... processer/tokenizer.o"
 	@echo "... processer/tokenizer.i"
 	@echo "... processer/tokenizer.s"

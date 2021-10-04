@@ -12,11 +12,10 @@
 #include "bgprocess.h"
 #include "../commands/execvp.h"
 #include "../commands/pinfo.h"
+#include "redirections.h"
 
 void tokenize_input(char *input);
 void tokenize(token_mat args_mat);
 void execute(token_mat arg,long int repeat);
-
-void redirections(token_mat arg,long int repeat);
 
 #endif //MY_SHELL_TOKENIZER_H

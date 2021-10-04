@@ -135,6 +135,12 @@
 		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/prompt.h">
 			<Option target="My_Shell"/>
 		</Unit>
+		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/redirections.c">
+			<Option target="My_Shell"/>
+		</Unit>
+		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/redirections.h">
+			<Option target="My_Shell"/>
+		</Unit>
 		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/tokenizer.c">
 			<Option target="My_Shell"/>
 		</Unit>
