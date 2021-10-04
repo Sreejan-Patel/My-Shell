@@ -345,6 +345,30 @@ processer/bgprocess.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/bgprocess.c.s
 .PHONY : processer/bgprocess.c.s
 
+processer/pipeline.o: processer/pipeline.c.o
+.PHONY : processer/pipeline.o
+
+# target to build an object file
+processer/pipeline.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/pipeline.c.o
+.PHONY : processer/pipeline.c.o
+
+processer/pipeline.i: processer/pipeline.c.i
+.PHONY : processer/pipeline.i
+
+# target to preprocess a source file
+processer/pipeline.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/pipeline.c.i
+.PHONY : processer/pipeline.c.i
+
+processer/pipeline.s: processer/pipeline.c.s
+.PHONY : processer/pipeline.s
+
+# target to generate assembly for a file
+processer/pipeline.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/pipeline.c.s
+.PHONY : processer/pipeline.c.s
+
 processer/prompt.o: processer/prompt.c.o
 .PHONY : processer/prompt.o
 
@@ -525,6 +549,9 @@ help:
 	@echo "... processer/bgprocess.o"
 	@echo "... processer/bgprocess.i"
 	@echo "... processer/bgprocess.s"
+	@echo "... processer/pipeline.o"
+	@echo "... processer/pipeline.i"
+	@echo "... processer/pipeline.s"
 	@echo "... processer/prompt.o"
 	@echo "... processer/prompt.i"
 	@echo "... processer/prompt.s"

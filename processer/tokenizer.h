@@ -13,6 +13,7 @@
 #include "../commands/execvp.h"
 #include "../commands/pinfo.h"
 #include "redirections.h"
+#include "pipeline.h"
 
 void tokenize_input(char *input);
 void tokenize(token_mat args_mat);

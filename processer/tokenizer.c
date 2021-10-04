@@ -73,8 +73,14 @@ void tokenize(token_mat args_mat){
                 mode = 2;
             else if(strcmp(arg.args[k],">>") == 0)
                 mode = 3;
+            else if(strcmp(arg.args[k],"|") == 0)
+                mode = 4;
         }
-        if(mode){
+        if(mode == 4){
+            pipeline(arg,repeat);
+            return;
+        }
+        else if(mode){
             redirections(arg,repeat);
             return;
         }

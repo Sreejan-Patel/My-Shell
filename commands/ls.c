@@ -233,7 +233,7 @@ void ls_l(char* path,int flag_a){
         return;
     }
 
-    long long int total = get_block_size(path);
+    long long int total = get_block_size(path,flag_a);
     printf("total %lld\n",total);
     struct dirent *input_dir;
     while((input_dir = readdir(dir)) != NULL){
@@ -447,7 +447,7 @@ void ls_l(char* path,int flag_a){
 
 // gets the total block size
 
-long long int get_block_size(char* directory) {
+long long int get_block_size(char* directory,int flag_a) {
     long long int size = 0;
 
     DIR *d;
@@ -456,7 +456,20 @@ long long int get_block_size(char* directory) {
     d = opendir(directory);
     if (d) {
         while ((dir = readdir(d)) != NULL) {
-            if (dir->d_name[0] != '.') {                                // Ignore hidden files
+            if(flag_a == 0){
+                if (dir->d_name[0] != '.') {                                // Ignore hidden files
+                    char info_path[MAX_TOKEN_LENGTH + 1];
+                    strcpy(info_path, directory);
+                    if (directory[strlen(directory) - 1] != '/')
+                        strcat(info_path, "/");
+                    strcat(info_path, dir->d_name);
+
+                    stat(info_path, &fileStat);
+
+                    size += fileStat.st_blocks;
+                }
+            }
+            else{
                 char info_path[MAX_TOKEN_LENGTH + 1];
                 strcpy(info_path, directory);
                 if (directory[strlen(directory) - 1] != '/')

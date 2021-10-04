@@ -9,13 +9,16 @@ void redirections(token_mat arg,long int repeat){
 
     int command_num = 0;
     int mode = 0;
+    int append = 0;
     for (int i = 0; i <= arg.num_args ; i++) {
         if (strcmp(arg.args[i],"<") == 0)
             mode = 1;
         else if (strcmp(arg.args[i],">") == 0)
             mode = 2;
-        else if(strcmp(arg.args[i],">>") == 0)
+        else if(strcmp(arg.args[i],">>") == 0){
             mode = 3;
+            append = 1;
+        }
         else if (mode == 0) {
             command.args[command_num] = arg.args[i];
             command_num++;
@@ -25,6 +28,7 @@ void redirections(token_mat arg,long int repeat){
         }
         else if (mode == 2 || mode == 3) {
             strcpy(output_file,arg.args[i]);
+            break;
         }
     }
     command.num_args = command_num - 1;
@@ -45,7 +49,7 @@ void redirections(token_mat arg,long int repeat){
 
     if(strlen(output_file) != 0){
         int write_mode;
-        if(mode == 3)
+        if(append == 1)
             write_mode = O_APPEND;
         else
             write_mode = O_TRUNC;

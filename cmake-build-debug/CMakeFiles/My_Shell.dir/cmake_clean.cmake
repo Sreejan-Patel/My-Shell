@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/My_Shell.dir/globals.c.o"
   "CMakeFiles/My_Shell.dir/main.c.o"
   "CMakeFiles/My_Shell.dir/processer/bgprocess.c.o"
+  "CMakeFiles/My_Shell.dir/processer/pipeline.c.o"
   "CMakeFiles/My_Shell.dir/processer/prompt.c.o"
   "CMakeFiles/My_Shell.dir/processer/redirections.c.o"
   "CMakeFiles/My_Shell.dir/processer/tokenizer.c.o"
