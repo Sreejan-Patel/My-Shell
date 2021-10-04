@@ -32,8 +32,8 @@ void redirections(token_mat arg,long int repeat){
 
     int stdin = dup(STDIN_FILENO);
     int stdout = dup(STDOUT_FILENO);
-    int fd_in;
-    int fd_out;
+    int fd_in = -1;
+    int fd_out = -1;
     if(strlen(input_file) != 0){
         fd_in = open(input_file,O_RDONLY);
         if(fd_in < 0){
