@@ -67,14 +67,19 @@ void tokenize(token_mat args_mat){
 
         int mode = 0;
         for(int k = 0 ; k <= arg.num_args ; k++){
-            if(strcmp(arg.args[k],"<") == 0)
+            if(strcmp(arg.args[k],"<") == 0){
                 mode = 1;
-            else if(strcmp(arg.args[k],">") == 0)
+            }
+            else if(strcmp(arg.args[k],">") == 0){
                 mode = 2;
-            else if(strcmp(arg.args[k],">>") == 0)
+            }
+            else if(strcmp(arg.args[k],">>") == 0){
                 mode = 3;
-            else if(strcmp(arg.args[k],"|") == 0)
+            }
+            else if(strcmp(arg.args[k],"|") == 0){
                 mode = 4;
+                break;
+            }
         }
         if(mode == 4){
             pipeline(arg,repeat);
