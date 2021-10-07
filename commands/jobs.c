@@ -3,9 +3,7 @@
 void command_jobs(){
     for(int i = 0; i < MAX_TOKENS && run[i]->pid != 0; i++){
         char pid[MAX_TOKENS];
-        int p_pid;
-        p_pid = atoi(run[i]->pid);
-        sprintf(pid,"%d",p_pid);
+        sprintf(pid,"%d",run[i]->pid);
 
         char final_stat[MAX_TOKENS];
         char *stat = status(pid);
