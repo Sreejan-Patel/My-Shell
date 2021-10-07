@@ -18,7 +18,7 @@ void command_sig(token_mat arg){
     int job_number = atoi(arg.args[1]);
     int signal_number = atoi(arg.args[2]);
 
-    if(job_number < 1 || job_number > count){
+    if(job_number < 1 || job_number > count+1){
         printf("Error No job\n");
         return;
     }
