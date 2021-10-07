@@ -13,7 +13,6 @@ void initialize(){
     getcwd(prev_path,MAX_PATH_LENGTH);
 
     make_bgprocess_mat();
-    make_jobs_mat();
 
 }
 

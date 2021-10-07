@@ -22,7 +22,4 @@ typedef struct arg_mat token_mat;
 typedef struct process process;
 extern struct process **run;
 
-typedef struct jobs_list jobs_list;
-extern struct jobs_list **jobs;
-
 #endif //MY_SHELL_GLOBALS_H
