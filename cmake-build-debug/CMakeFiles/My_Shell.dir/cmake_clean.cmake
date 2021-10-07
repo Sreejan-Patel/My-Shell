@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/My_Shell.dir/commands/ls.c.o"
   "CMakeFiles/My_Shell.dir/commands/pinfo.c.o"
   "CMakeFiles/My_Shell.dir/commands/pwd.c.o"
+  "CMakeFiles/My_Shell.dir/commands/sig.c.o"
   "CMakeFiles/My_Shell.dir/globals.c.o"
   "CMakeFiles/My_Shell.dir/main.c.o"
   "CMakeFiles/My_Shell.dir/processer/bgprocess.c.o"

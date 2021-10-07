@@ -116,6 +116,9 @@ void execute(token_mat arg,long int repeat){
         else if(strcmp(arg.args[0],"jobs") == 0){
             command_jobs(arg);
         }
+        else if(strcmp(arg.args[0],"sig") == 0){
+            command_sig(arg);
+        }
         else{
             command_execvp(arg);
         }
@@ -139,6 +142,9 @@ void execute(token_mat arg,long int repeat){
             }
             else if(strcmp(arg.args[0],"jobs") == 0){
                 command_jobs(arg);
+            }
+            else if(strcmp(arg.args[0],"sig") == 0){
+                command_sig(arg);
             }
             else{
                 command_execvp(arg);
