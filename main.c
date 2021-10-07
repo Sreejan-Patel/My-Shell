@@ -8,7 +8,6 @@
 int main() {
     clear_screen();
     initialize();
-
     int i;
 
 #pragma clang diagnostic push

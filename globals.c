@@ -12,3 +12,4 @@ unsigned int shell_path_length;
 int is_bg;
 
 struct process **run;
+struct jobs_list **jobs;
