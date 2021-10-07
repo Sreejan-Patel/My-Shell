@@ -55,6 +55,10 @@ void command_execvp(token_mat arg){
             for(j = 0 ; j < MAX_TOKENS ; j++){
                 if(run[j]->name[0] == '\0'){
                     strcpy(run[j]->name,arg.args[0]);
+                    for(int k = 1 ; k < arg.num_args; k++){
+                        strcat(run[j]->name," ");
+                        strcat(run[j]->name,arg.args[k]);
+                    }
                     run[j]->pid = child;
                     break;
                 }

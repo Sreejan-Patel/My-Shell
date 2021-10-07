@@ -1,5 +1,4 @@
 #include "jobs.h"
-#include "jobs.h"
 
 void command_jobs(token_mat arg){
     if(arg.num_args > 1){
@@ -52,7 +51,7 @@ void command_jobs(token_mat arg){
             }
             else if(strcmp(arg.args[i],"-s") == 0){
                 if(strcmp(final_stat,"Stopped") == 0){
-                    sprintf("[%d] %s %s [%d]",i+1,final_stat,run[i]->name,run[i]->pid);
+                    sprintf(print_jobs[i],"[%d] %s %s [%d]",i+1,final_stat,run[i]->name,run[i]->pid);
                     sprintf(compare_jobs[i],"%s",run[i]->name);
                     count++;
                 }
@@ -67,11 +66,15 @@ void command_jobs(token_mat arg){
     }
     char temp[MAX_TOKEN_LENGTH];
     for(int i = 0 ; i < count ; i++){
-        for(int j = 0 ; j < count ; j++){
-            if(strcmp(&compare_jobs[i][0],&compare_jobs[j][0]) > 0){
-                strcpy(temp,print_jobs[i]);
-                strcpy(print_jobs[i],print_jobs[j]);
-                strcpy(print_jobs[j],temp);
+        for(int j = i+1 ; j < count ; j++){
+            for(int k = 0 ; ; k++){
+                if(compare_jobs[i][k] == '\0' || compare_jobs[j][k] == '\0')
+                    break;
+                if(strcmp(&compare_jobs[i][k],&compare_jobs[j][k]) > 0) {
+                    strcpy(temp, print_jobs[i]);
+                    strcpy(print_jobs[i], print_jobs[j]);
+                    strcpy(print_jobs[j], temp);
+                }
             }
         }
     }
