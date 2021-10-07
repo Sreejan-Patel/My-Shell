@@ -55,7 +55,7 @@ void command_pinfo(token_mat arg){
         strcat(exe,"/exe");
 
         char* temp2 = malloc(sizeof(char)*1000);
-        int check = readlink(exe,temp2,1000);
+        long int check = readlink(exe,temp2,1000);
         if(check < 0){
             perror("Error Executable Path! ");
             return;
@@ -123,7 +123,7 @@ void command_pinfo(token_mat arg){
             strcat(exe,"/exe");
 
             char* temp2 = malloc(sizeof(char)*1000);
-            int check = readlink(exe,temp2,1000);
+            long int check = readlink(exe,temp2,1000);
             if(check < 0){
                 perror("Error Executable Path! ");
                 return;
