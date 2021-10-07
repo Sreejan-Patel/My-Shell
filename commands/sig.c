@@ -22,6 +22,10 @@ void command_sig(token_mat arg){
         printf("Error No job\n");
         return;
     }
+    if(signal_number < 0 || signal_number > 32){
+        printf("Error Invalid Signal Number\n");
+        return;
+    }
 
     int job_pid = run[job_number-1]->pid;
 
