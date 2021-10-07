@@ -56,7 +56,7 @@ void command_pinfo(token_mat arg){
 
 }
 
-char *status(char* pid){
+char* status(char* pid){
     char status[MAX_TOKEN_LENGTH];
     strcpy(status,"/proc/");
     strcat(status,pid);

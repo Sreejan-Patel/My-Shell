@@ -7,27 +7,24 @@ void command_jobs(){
         p_pid = atoi(run[i]->pid);
         sprintf(pid,"%d",p_pid);
 
-        char status[MAX_TOKEN_LENGTH];
-        strcpy(status,"/proc/");
-        strcat(status,pid);
-        strcat(status,"/stat");
-
-        int fd_status = open(status,O_RDONLY);
-        if(fd_status < 0){
-            perror("Error status! ");
-            return;
+        char final_stat[MAX_TOKENS];
+        char *stat = status(pid);
+        if (stat == NULL) {
+            continue;
         }
-
-        char *temp = malloc(sizeof(char)*1000);
-        if(read(fd_status,temp,10000) == 0){
-            perror("Error , couldn't read status! ");
-            return;
+        else if (stat[0] == 'R') {
+            strcpy(final_stat,"Running");
+        } else if (stat[0] == 'S' || stat[0] == 'D') {
+            strcpy(final_stat,"Sleeping");
+        } else if (stat[0] == 'Z' || stat[0] == 'z') {
+            strcpy(final_stat,"Zombie");
+        } else if (stat[0] == 'T' || stat[0] == 't') {
+            strcpy(final_stat,"Stopped");
+        } else {
+            perror("Error status ID! ");
+            continue;
         }
-        close(fd_status);
-        strtok(temp, " ");
-        strtok(NULL, " ");
-
-        char *stat = strtok(NULL, " ");
+        printf("[%d] %s %s [%d]\n",i+1,final_stat,run[i]->name,run[i]->pid);
 
     }
 }

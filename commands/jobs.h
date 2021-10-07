@@ -6,6 +6,7 @@
 #include "../processer/prompt.h"
 #include "../processer/tokenizer.h"
 #include "../globals.h"
+#include "../commands/pinfo.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
