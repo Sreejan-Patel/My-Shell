@@ -7,6 +7,7 @@
 #include "../processer/tokenizer.h"
 #include <unistd.h>
 #include <stdlib.h>
+#include <sys/wait.h>
 
 void command_execvp(token_mat arg);
 
