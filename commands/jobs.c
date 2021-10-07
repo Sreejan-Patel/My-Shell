@@ -5,8 +5,11 @@ void command_jobs(token_mat arg){
         printf("Error Too many arguments!\n");
         return;
     }
-
+    char **print_jobs;
+    print_jobs = (char**) malloc(sizeof(char*)*MAX_TOKENS);
+    int count = 0;
     for(int i = 0; i < MAX_TOKENS && run[i]->pid != 0; i++){
+        print_jobs[i] = (char*) malloc(sizeof(char)*MAX_TOKEN_LENGTH);
         char pid[MAX_TOKENS];
         sprintf(pid,"%d",run[i]->pid);
 
@@ -27,18 +30,24 @@ void command_jobs(token_mat arg){
             perror("Error status ID! ");
             continue;
         }
-        if(arg.num_args == 0)
-            printf("[%d] %s %s [%d]\n",i+1,final_stat,run[i]->name,run[i]->pid);
+        if(arg.num_args == 0){
+            printf(print_jobs[i],"[%d] %s %s [%d]",i+1,final_stat,run[i]->name,run[i]->pid);
+            count++;
+        }
         else{
             if(strcmp(arg.args[i],"-r") == 0){
-                if(strcmp(final_stat,"Running") == 0)
-                    printf("[%d] %s %s [%d]\n",i+1,final_stat,run[i]->name,run[i]->pid);
+                if(strcmp(final_stat,"Running") == 0){
+                    sprintf(print_jobs[i],"[%d] %s %s [%d]",i+1,final_stat,run[i]->name,run[i]->pid);
+                    count++;
+                }
                 else
                     continue;
             }
             else if(strcmp(arg.args[i],"-s") == 0){
-                if(strcmp(final_stat,"Stopped") == 0)
-                    printf("[%d] %s %s [%d]\n",i+1,final_stat,run[i]->name,run[i]->pid);
+                if(strcmp(final_stat,"Stopped") == 0){
+                    printf("[%d] %s %s [%d]",i+1,final_stat,run[i]->name,run[i]->pid);
+                    count++;
+                }
                 else
                     continue;
             }
@@ -48,4 +57,20 @@ void command_jobs(token_mat arg){
             }
         }
     }
+    char temp[MAX_TOKEN_LENGTH];
+    for(int i = 0 ; i < count ; i++){
+        for(int j = 0 ; j < count ; j++){
+            if(strcmp(&print_jobs[i][4],&print_jobs[j][4]) > 0){
+                strcpy(temp,print_jobs[i]);
+                strcpy(print_jobs[i],print_jobs[j]);
+                strcpy(print_jobs[j],temp);
+            }
+        }
+    }
+
+    for(int i = 0 ; i < count ; i++){
+        printf("%s\n",print_jobs[i]);
+        free(print_jobs[i]);
+    }
+    free(print_jobs);
 }
