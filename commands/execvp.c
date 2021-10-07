@@ -51,7 +51,8 @@ void command_execvp(token_mat arg){
         if (!is_bg)
             waitpid(child, &i, WUNTRACED); //if it is not a background process, wait, till it gets over
         else {
-            for(int j = 0 ; j < MAX_TOKENS ; j++){
+            int j;
+            for(j = 0 ; j < MAX_TOKENS ; j++){
                 if(run[j]->name[0] == '\0'){
                     strcpy(run[j]->name,arg.args[0]);
                     run[j]->pid = child;
@@ -59,6 +60,10 @@ void command_execvp(token_mat arg){
                 }
                 else
                     continue;
+            }
+            if(j == MAX_TOKENS){
+                printf("Error- Max no of jobs reached!\n");
+                return;
             }
             printf("%d\n",child);
         }
