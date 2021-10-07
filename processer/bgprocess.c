@@ -16,7 +16,6 @@ void print_finished_bgprocess(){
             if(run[i]->pid == pid){
                 if (WIFEXITED(status) && WEXITSTATUS(status) == EXIT_SUCCESS) {
                     printf("%s with pid %d exited normally with status %d\n", run[i]->name, run[i]->pid, WEXITSTATUS(status));
-
                     for(int j = i ; j < MAX_TOKENS-1 ; j++){
                         strcpy(run[j]->name,run[j+1]->name);
                         run[j]->pid = run[j+1]->pid;
@@ -26,7 +25,6 @@ void print_finished_bgprocess(){
                 }
                 else{
                     printf("%s with pid %d exited abnormally with error status %d\n", run[i]->name, run[i]->pid, WEXITSTATUS(status));
-
                     for(int j = i ; j < MAX_TOKENS-1 ; j++){
                         strcpy(run[j]->name,run[j+1]->name);
                         run[j]->pid = run[j+1]->pid;

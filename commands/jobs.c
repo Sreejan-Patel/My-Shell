@@ -25,7 +25,7 @@ void command_jobs(token_mat arg){
         else if (strcmp(stat,"R") == 0) {
             strcpy(final_stat,"Running");
         } else if (strcmp(stat,"S") == 0) {
-            strcpy(final_stat,"Sleeping");
+            strcpy(final_stat,"Running");
         } else if (strcmp(stat,"Z") == 0) {
             strcpy(final_stat,"Zombie");
         } else if (strcmp(stat,"T") == 0) {
