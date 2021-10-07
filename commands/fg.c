@@ -25,6 +25,8 @@ void command_fg(token_mat arg){
 
     printf("[%d] %s %d background process resumed!\n", job_number, run[job_number-1]->name, job_pid);
 
+    delete_process(job_number-1);
+
     // protect shell against signals for illegal use of stdin and stdout
     signal(SIGTTIN, SIG_IGN);
     signal(SIGTTOU, SIG_IGN);
@@ -46,5 +48,7 @@ void command_fg(token_mat arg){
     // safe to end protection from signals
     signal(SIGTTIN, SIG_DFL);
     signal(SIGTTOU, SIG_DFL);
+
+
 
 }

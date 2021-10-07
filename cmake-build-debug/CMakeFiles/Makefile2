@@ -45,19 +45,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/sreejan/Downloads/clion-2021.2.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /home/sreejan/Downloads/clion-2021.2.2/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell
+CMAKE_SOURCE_DIR = /home/sreejan/CLionProjects/My_Shell
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sreejan/CLionProjects/My_Shell/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/My_Shell.dir/clean
 CMakeFiles/My_Shell.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target My_Shell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target My_Shell"
 .PHONY : CMakeFiles/My_Shell.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/My_Shell.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sreejan/CLionProjects/My_Shell/cmake-build-debug/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/My_Shell.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sreejan/CLionProjects/My_Shell/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/My_Shell.dir/rule
 
 # Convenience name for target.

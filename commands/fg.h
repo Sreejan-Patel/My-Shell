@@ -4,6 +4,7 @@
 #include "../utils/files.h"
 #include "../utils/inputmat.h"
 #include "../processer/prompt.h"
+#include "../processer/bgprocess.h"
 #include "../processer/tokenizer.h"
 #include "../globals.h"
 #include "../commands/pinfo.h"

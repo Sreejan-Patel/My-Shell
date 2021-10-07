@@ -10,5 +10,6 @@
 #include <stdlib.h>
 
 void print_finished_bgprocess();
+void delete_process(int job_number);
 
 #endif //MY_SHELL_BGPROCESS_H

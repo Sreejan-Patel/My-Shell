@@ -16,21 +16,11 @@ void print_finished_bgprocess(){
             if(run[i]->pid == pid){
                 if (WIFEXITED(status) && WEXITSTATUS(status) == EXIT_SUCCESS) {
                     printf("%s with pid %d exited normally with status %d\n", run[i]->name, run[i]->pid, WEXITSTATUS(status));
-                    for(int j = i ; j < MAX_TOKENS-1 ; j++){
-                        strcpy(run[j]->name,run[j+1]->name);
-                        run[j]->pid = run[j+1]->pid;
-                    }
-                    strcpy(run[MAX_TOKENS-1]->name,"\0");
-                    run[MAX_TOKENS-1]->pid = 0;
+                    delete_process(i);
                 }
                 else{
                     printf("%s with pid %d exited abnormally with error status %d\n", run[i]->name, run[i]->pid, WEXITSTATUS(status));
-                    for(int j = i ; j < MAX_TOKENS-1 ; j++){
-                        strcpy(run[j]->name,run[j+1]->name);
-                        run[j]->pid = run[j+1]->pid;
-                    }
-                    strcpy(run[MAX_TOKENS-1]->name,"\0");
-                    run[MAX_TOKENS-1]->pid = 0;
+                    delete_process(i);
                 }
             }
             else
@@ -38,9 +28,15 @@ void print_finished_bgprocess(){
 
         }
     }
+}
 
-
-
+void delete_process(int job_number){
+    for(int j = job_number; j < MAX_TOKENS-1 ; j++){
+        strcpy(run[j]->name,run[j+1]->name);
+        run[j]->pid = run[j+1]->pid;
+    }
+    strcpy(run[MAX_TOKENS-1]->name,"\0");
+    run[MAX_TOKENS-1]->pid = 0;
 }
 
 
