@@ -30,7 +30,11 @@ int main() {
         i = 0;
         while (1) {
             temp = (char)getchar();
-            if (temp != '\n')
+            if(temp == '\377'){
+                printf("\nExiting My_Shell\n");
+                exit(0);
+            }
+            else if (temp != '\n')
                 input[i++] = temp;
             else {
                 input[i] = '\0';
