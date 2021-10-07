@@ -201,6 +201,30 @@ commands/execvp.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/commands/execvp.c.s
 .PHONY : commands/execvp.c.s
 
+commands/fg.o: commands/fg.c.o
+.PHONY : commands/fg.o
+
+# target to build an object file
+commands/fg.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/commands/fg.c.o
+.PHONY : commands/fg.c.o
+
+commands/fg.i: commands/fg.c.i
+.PHONY : commands/fg.i
+
+# target to preprocess a source file
+commands/fg.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/commands/fg.c.i
+.PHONY : commands/fg.c.i
+
+commands/fg.s: commands/fg.c.s
+.PHONY : commands/fg.s
+
+# target to generate assembly for a file
+commands/fg.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/commands/fg.c.s
+.PHONY : commands/fg.c.s
+
 commands/jobs.o: commands/jobs.c.o
 .PHONY : commands/jobs.o
 
@@ -579,6 +603,9 @@ help:
 	@echo "... commands/execvp.o"
 	@echo "... commands/execvp.i"
 	@echo "... commands/execvp.s"
+	@echo "... commands/fg.o"
+	@echo "... commands/fg.i"
+	@echo "... commands/fg.s"
 	@echo "... commands/jobs.o"
 	@echo "... commands/jobs.i"
 	@echo "... commands/jobs.s"

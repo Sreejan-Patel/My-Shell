@@ -11,6 +11,7 @@
 #include "../commands/ls.h"
 #include "../commands/jobs.h"
 #include "../commands/sig.h"
+#include "../commands/fg.h"
 #include "bgprocess.h"
 #include "../commands/execvp.h"
 #include "../commands/pinfo.h"

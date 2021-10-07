@@ -19,7 +19,7 @@ void command_sig(token_mat arg){
     int signal_number = atoi(arg.args[2]);
 
     if(job_number < 1 || job_number > count+1){
-        printf("Error No job\n");
+        printf("Error Invalid job_number!\n");
         return;
     }
     if(signal_number < 0 || signal_number > 32){
@@ -29,7 +29,10 @@ void command_sig(token_mat arg){
 
     int job_pid = run[job_number-1]->pid;
 
-    kill(job_pid,signal_number);
+    if(kill(job_pid,signal_number) < 0){
+        perror("Error Could not send signal! ");
+        return;
+    }
 
 
 

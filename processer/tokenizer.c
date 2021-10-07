@@ -119,6 +119,9 @@ void execute(token_mat arg,long int repeat){
         else if(strcmp(arg.args[0],"sig") == 0){
             command_sig(arg);
         }
+        else if(strcmp(arg.args[0],"fg") == 0){
+            command_fg(arg);
+        }
         else{
             command_execvp(arg);
         }
@@ -145,6 +148,9 @@ void execute(token_mat arg,long int repeat){
             }
             else if(strcmp(arg.args[0],"sig") == 0){
                 command_sig(arg);
+            }
+            else if(strcmp(arg.args[0],"fg") == 0){
+                command_fg(arg);
             }
             else{
                 command_execvp(arg);

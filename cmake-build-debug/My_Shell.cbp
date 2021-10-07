@@ -96,6 +96,12 @@
 		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.h">
 			<Option target="My_Shell"/>
 		</Unit>
+		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/fg.c">
+			<Option target="My_Shell"/>
+		</Unit>
+		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/fg.h">
+			<Option target="My_Shell"/>
+		</Unit>
 		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/jobs.c">
 			<Option target="My_Shell"/>
 		</Unit>

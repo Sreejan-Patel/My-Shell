@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/cd.c" "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles/My_Shell.dir/commands/cd.c.o"
   "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/echo.c" "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles/My_Shell.dir/commands/echo.c.o"
   "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.c" "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles/My_Shell.dir/commands/execvp.c.o"
+  "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/fg.c" "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles/My_Shell.dir/commands/fg.c.o"
   "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/jobs.c" "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles/My_Shell.dir/commands/jobs.c.o"
   "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.c" "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles/My_Shell.dir/commands/ls.c.o"
   "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pinfo.c" "/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles/My_Shell.dir/commands/pinfo.c.o"

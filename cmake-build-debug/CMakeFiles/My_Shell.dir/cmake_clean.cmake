@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/My_Shell.dir/commands/cd.c.o"
   "CMakeFiles/My_Shell.dir/commands/echo.c.o"
   "CMakeFiles/My_Shell.dir/commands/execvp.c.o"
+  "CMakeFiles/My_Shell.dir/commands/fg.c.o"
   "CMakeFiles/My_Shell.dir/commands/jobs.c.o"
   "CMakeFiles/My_Shell.dir/commands/ls.c.o"
   "CMakeFiles/My_Shell.dir/commands/pinfo.c.o"
