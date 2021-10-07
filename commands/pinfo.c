@@ -13,12 +13,18 @@ void command_pinfo(token_mat arg){
         printf("PID -- %s\n",pid);
 
         char *stat = status(pid);
+        if(stat == NULL)
+            return;
         printf("Process Status -- %s\n", stat);
 
         char *mem = memory(pid);
+        if(mem == NULL)
+            return;
         printf("Memory --  %s\n",mem);
 
         char* executable = exe(pid);
+        if(executable == NULL)
+            return;
         printf("Executable Path -- %s%s\n",shell, get_relative_path(executable));
     }
     else{
@@ -32,12 +38,18 @@ void command_pinfo(token_mat arg){
             printf("PID -- %s\n",pid);
 
             char *stat = status(pid);
+            if(stat == NULL)
+                return;
             printf("Process Status -- %s\n", stat);
 
             char *mem = memory(pid);
+            if(mem == NULL)
+                return;
             printf("Memory --  %s\n",mem);
 
             char* executable = exe(pid);
+            if(executable == NULL)
+                return;
             printf("Executable path -- %s\n", executable);
         }
     }
