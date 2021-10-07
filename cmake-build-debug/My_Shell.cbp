@@ -8,182 +8,174 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug"/>
+				<Option working_dir="/home/sreejan/CLionProjects/My_Shell/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug"/>
+				<Option working_dir="/home/sreejan/CLionProjects/My_Shell/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug"/>
+				<Option working_dir="/home/sreejan/CLionProjects/My_Shell/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="My_Shell">
-				<Option output="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/My_Shell" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug"/>
+				<Option output="/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/My_Shell" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sreejan/CLionProjects/My_Shell/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/opt/homebrew/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 My_Shell"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 My_Shell"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="My_Shell/fast">
-				<Option output="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/My_Shell" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug"/>
+				<Option output="/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/My_Shell" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sreejan/CLionProjects/My_Shell/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/opt/homebrew/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 My_Shell/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 My_Shell/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sreejan/CLionProjects/My_Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/cd.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/commands/cd.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/cd.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/commands/cd.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/echo.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/commands/echo.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/echo.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/commands/echo.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/commands/execvp.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/execvp.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/commands/execvp.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/jobs.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/commands/jobs.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/jobs.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/commands/jobs.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/commands/ls.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/ls.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/commands/ls.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pinfo.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/commands/pinfo.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pinfo.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/commands/pinfo.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pwd.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/commands/pwd.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/commands/pwd.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/commands/pwd.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/globals.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/globals.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/globals.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/globals.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/main.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/main.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/bgprocess.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/processer/bgprocess.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/bgprocess.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/processer/bgprocess.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/pipeline.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/processer/pipeline.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/pipeline.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/processer/pipeline.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/prompt.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/processer/prompt.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/prompt.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/processer/prompt.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/redirections.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/processer/redirections.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/redirections.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/processer/redirections.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/tokenizer.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/processer/tokenizer.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/processer/tokenizer.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/processer/tokenizer.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/bgprocessmat.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/utils/bgprocessmat.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/bgprocessmat.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/utils/bgprocessmat.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/files.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/utils/files.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/files.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/utils/files.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/inputmat.c">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/utils/inputmat.c">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/inputmat.h">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/utils/inputmat.h">
 			<Option target="My_Shell"/>
 		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/jobsmat.c">
-			<Option target="My_Shell"/>
-		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/jobsmat.h">
-			<Option target="My_Shell"/>
-		</Unit>
-		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/CMakeLists.txt">
+		<Unit filename="/home/sreejan/CLionProjects/My_Shell/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

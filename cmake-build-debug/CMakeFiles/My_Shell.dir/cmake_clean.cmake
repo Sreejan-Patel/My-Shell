@@ -16,7 +16,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/My_Shell.dir/utils/bgprocessmat.c.o"
   "CMakeFiles/My_Shell.dir/utils/files.c.o"
   "CMakeFiles/My_Shell.dir/utils/inputmat.c.o"
-  "CMakeFiles/My_Shell.dir/utils/jobsmat.c.o"
   "My_Shell"
   "My_Shell.pdb"
 )
