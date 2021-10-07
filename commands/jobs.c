@@ -10,13 +10,13 @@ void command_jobs(){
         if (stat == NULL) {
             continue;
         }
-        else if (stat[0] == 'R') {
+        else if (strcmp(stat,"R") == 0) {
             strcpy(final_stat,"Running");
-        } else if (stat[0] == 'S' || stat[0] == 'D') {
+        } else if (strcmp(stat,"S") == 0) {
             strcpy(final_stat,"Sleeping");
-        } else if (stat[0] == 'Z' || stat[0] == 'z') {
+        } else if (strcmp(stat,"Z") == 0) {
             strcpy(final_stat,"Zombie");
-        } else if (stat[0] == 'T' || stat[0] == 't') {
+        } else if (strcmp(stat,"T") == 0) {
             strcpy(final_stat,"Stopped");
         } else {
             perror("Error status ID! ");
