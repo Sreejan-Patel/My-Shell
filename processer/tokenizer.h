@@ -9,6 +9,7 @@
 #include "../commands/pwd.h"
 #include "../commands/cd.h"
 #include "../commands/ls.h"
+#include "../commands/jobs.h"
 #include "bgprocess.h"
 #include "../commands/execvp.h"
 #include "../commands/pinfo.h"

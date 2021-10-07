@@ -113,6 +113,9 @@ void execute(token_mat arg,long int repeat){
         else if(strcmp(arg.args[0],"pinfo") == 0){
             command_pinfo(arg);
         }
+        else if(strcmp(arg.args[0],"jobs") == 0){
+            command_jobs(arg);
+        }
         else{
             command_execvp(arg);
         }
@@ -133,6 +136,9 @@ void execute(token_mat arg,long int repeat){
             }
             else if(strcmp(arg.args[0],"pinfo") == 0){
                 command_pinfo(arg);
+            }
+            else if(strcmp(arg.args[0],"jobs") == 0){
+                command_jobs(arg);
             }
             else{
                 command_execvp(arg);
