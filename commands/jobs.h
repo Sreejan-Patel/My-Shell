@@ -12,7 +12,7 @@
 #include <unistd.h>
 #include <sys/stat.h>
 
-void command_jobs();
+void command_jobs(token_mat arg);
 
 
 #endif //MY_SHELL_JOBS_H
