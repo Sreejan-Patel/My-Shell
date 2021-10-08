@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/sreejan/Downloads/clion-2021.2.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/sreejan/Downloads/clion-2021.2.2/bin/cmake/linux/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sreejan/CLionProjects/My_Shell
+CMAKE_SOURCE_DIR = /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sreejan/CLionProjects/My_Shell/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/sreejan/CLionProjects/My_Shell/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/sreejan/Downloads/clion-2021.2.2/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/sreejan/Downloads/clion-2021.2.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sreejan/CLionProjects/My_Shell/cmake-build-debug/CMakeFiles /home/sreejan/CLionProjects/My_Shell/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sreejan/CLionProjects/My_Shell/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -489,6 +489,30 @@ processer/redirections.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/redirections.c.s
 .PHONY : processer/redirections.c.s
 
+processer/signals.o: processer/signals.c.o
+.PHONY : processer/signals.o
+
+# target to build an object file
+processer/signals.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/signals.c.o
+.PHONY : processer/signals.c.o
+
+processer/signals.i: processer/signals.c.i
+.PHONY : processer/signals.i
+
+# target to preprocess a source file
+processer/signals.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/signals.c.i
+.PHONY : processer/signals.c.i
+
+processer/signals.s: processer/signals.c.s
+.PHONY : processer/signals.s
+
+# target to generate assembly for a file
+processer/signals.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/signals.c.s
+.PHONY : processer/signals.c.s
+
 processer/tokenizer.o: processer/tokenizer.c.o
 .PHONY : processer/tokenizer.o
 
@@ -512,30 +536,6 @@ processer/tokenizer.s: processer/tokenizer.c.s
 processer/tokenizer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/tokenizer.c.s
 .PHONY : processer/tokenizer.c.s
-
-utils/bgprocessmat.o: utils/bgprocessmat.c.o
-.PHONY : utils/bgprocessmat.o
-
-# target to build an object file
-utils/bgprocessmat.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/bgprocessmat.c.o
-.PHONY : utils/bgprocessmat.c.o
-
-utils/bgprocessmat.i: utils/bgprocessmat.c.i
-.PHONY : utils/bgprocessmat.i
-
-# target to preprocess a source file
-utils/bgprocessmat.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/bgprocessmat.c.i
-.PHONY : utils/bgprocessmat.c.i
-
-utils/bgprocessmat.s: utils/bgprocessmat.c.s
-.PHONY : utils/bgprocessmat.s
-
-# target to generate assembly for a file
-utils/bgprocessmat.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/bgprocessmat.c.s
-.PHONY : utils/bgprocessmat.c.s
 
 utils/files.o: utils/files.c.o
 .PHONY : utils/files.o
@@ -584,6 +584,30 @@ utils/inputmat.s: utils/inputmat.c.s
 utils/inputmat.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/inputmat.c.s
 .PHONY : utils/inputmat.c.s
+
+utils/processmat.o: utils/processmat.c.o
+.PHONY : utils/processmat.o
+
+# target to build an object file
+utils/processmat.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/processmat.c.o
+.PHONY : utils/processmat.c.o
+
+utils/processmat.i: utils/processmat.c.i
+.PHONY : utils/processmat.i
+
+# target to preprocess a source file
+utils/processmat.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/processmat.c.i
+.PHONY : utils/processmat.c.i
+
+utils/processmat.s: utils/processmat.c.s
+.PHONY : utils/processmat.s
+
+# target to generate assembly for a file
+utils/processmat.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/processmat.c.s
+.PHONY : utils/processmat.c.s
 
 # Help Target
 help:
@@ -639,18 +663,21 @@ help:
 	@echo "... processer/redirections.o"
 	@echo "... processer/redirections.i"
 	@echo "... processer/redirections.s"
+	@echo "... processer/signals.o"
+	@echo "... processer/signals.i"
+	@echo "... processer/signals.s"
 	@echo "... processer/tokenizer.o"
 	@echo "... processer/tokenizer.i"
 	@echo "... processer/tokenizer.s"
-	@echo "... utils/bgprocessmat.o"
-	@echo "... utils/bgprocessmat.i"
-	@echo "... utils/bgprocessmat.s"
 	@echo "... utils/files.o"
 	@echo "... utils/files.i"
 	@echo "... utils/files.s"
 	@echo "... utils/inputmat.o"
 	@echo "... utils/inputmat.i"
 	@echo "... utils/inputmat.s"
+	@echo "... utils/processmat.o"
+	@echo "... utils/processmat.i"
+	@echo "... utils/processmat.s"
 .PHONY : help
 
 

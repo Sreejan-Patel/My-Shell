@@ -12,7 +12,12 @@ void initialize(){
     prev_path = (char*)malloc(sizeof(char)*MAX_PATH_LENGTH);
     getcwd(prev_path,MAX_PATH_LENGTH);
 
+    shell_pid = getpid();
+
     make_bgprocess_mat();
+    make_fgprocess_mat();
+
+    initialize_signals();
 
 }
 

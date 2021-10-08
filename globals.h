@@ -2,6 +2,7 @@
 #define MY_SHELL_GLOBALS_H
 
 #include <stdio.h>
+#include <termios.h>
 
 #define MAX_TOKEN_LENGTH 1000
 #define MAX_TOKENS 50
@@ -16,10 +17,14 @@ extern char *curr_path;
 
 extern unsigned int shell_path_length;
 extern int in_shell;
+extern int shell_pid;
 extern int is_bg;
 typedef struct arg_mat token_mat;
 
 typedef struct process process;
 extern struct process **run;
+extern struct process **fg_run;
+
+extern struct termios terminal;
 
 #endif //MY_SHELL_GLOBALS_H

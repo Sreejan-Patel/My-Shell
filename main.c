@@ -13,12 +13,15 @@ int main() {
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "EndlessLoop"
     while(!0){
+        fg_run[0]->pid = -1;
         print_finished_bgprocess();
 
         // check if any bg processes are still running
-        if(strcmp(run[0]->name,"\0") == 0){
+        if(run[0]->name[0] == '\0')
             is_bg = 0;
-        }
+
+        else
+            is_bg = 1;
         prompt_print();     //prints prompt
 
 

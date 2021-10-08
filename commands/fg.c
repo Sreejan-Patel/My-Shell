@@ -25,6 +25,9 @@ void command_fg(token_mat arg){
 
     printf("[%d] %s %d background process resumed!\n", job_number, run[job_number-1]->name, job_pid);
 
+    strcpy(fg_run[0]->name,run[job_number-1]->name);
+    fg_run[0]->pid = job_pid;
+
     delete_process(job_number-1);
 
     // protect shell against signals for illegal use of stdin and stdout
@@ -49,6 +52,11 @@ void command_fg(token_mat arg){
     signal(SIGTTIN, SIG_DFL);
     signal(SIGTTOU, SIG_DFL);
 
-
+    if(WIFSTOPPED(stat)){
+        printf("%s process with ID %d has been stopped!\n",fg_run[0]->name,job_pid);
+    }
+    else if(WIFSIGNALED(stat)){
+        printf("%s process with ID %d has received a signal %d!\n",fg_run[0]->name,job_pid, WTERMSIG(stat));
+    }
 
 }

@@ -48,8 +48,16 @@ void command_execvp(token_mat arg){
     }
     else {
         int i;
-        if (!is_bg)
+        if (!is_bg){
+            fg_run[0]->pid = child;
+            strcpy(fg_run[0]->name,arg.args[0]);
+            for(int j = 1 ; j <= arg.num_args; j++){
+                strcat(fg_run[0]->name," ");
+                strcat(fg_run[0]->name,arg.args[j]);
+            }
+
             waitpid(child, &i, WUNTRACED); //if it is not a background process, wait, till it gets over
+        }
         else {
             add_process(arg,child);
             printf("%d\n",child);

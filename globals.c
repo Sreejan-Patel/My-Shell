@@ -10,5 +10,9 @@ char *prev_path;
 int in_shell;
 unsigned int shell_path_length;
 int is_bg;
+int shell_pid;
 
 struct process **run;
+struct process **fg_run;
+
+struct termios terminal;
