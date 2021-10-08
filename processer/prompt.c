@@ -30,15 +30,15 @@ void prompt_print(){
     if(is_bg){
         if(in_shell){
             if(strcmp(shell_path,current_path) == 0){
-                printf(":')<%s@",get_user_name());
+                printf("<%s@",get_user_name());
                 get_system_name();
-                printf("%s>",shell);
+                printf("%s>>",shell);
             }
             else{
-                printf(":')<%s@",get_user_name());
+                printf("<%s@",get_user_name());
                 get_system_name();
                 printf("%s",shell);
-                printf("%s>",get_relative_path(current_path));
+                printf("%s>>",get_relative_path(current_path));
             }
         }
         else{                                       //outside the shell directory

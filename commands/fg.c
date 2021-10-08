@@ -54,9 +54,29 @@ void command_fg(token_mat arg){
 
     if(WIFSTOPPED(stat)){
         printf("%s process with ID %d has been stopped!\n",fg_run[0]->name,job_pid);
+        add_fgprocess();
     }
     else if(WIFSIGNALED(stat)){
         printf("%s process with ID %d has received a signal %d!\n",fg_run[0]->name,job_pid, WTERMSIG(stat));
     }
 
+}
+
+void add_fgprocess(){
+    int i;
+    for(i = 0 ; i < MAX_TOKENS ; i++){
+        if(run[i]->pid == fg_run[0]->pid)
+            return;
+        if(run[i]->name[0] == '\0'){
+            strcpy(run[i]->name,fg_run[0]->name);
+            run[i]->pid = fg_run[0]->pid;
+            break;
+        }
+    }
+    if(i == MAX_TOKENS){
+        printf("Error- Max no of jobs reached!\n");
+        return;
+    }
+    strcpy(fg_run[0]->name,"\0");
+    fg_run[0]->pid = -1;
 }

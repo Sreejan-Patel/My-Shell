@@ -14,6 +14,6 @@
 #include <sys/stat.h>
 
 void command_fg(token_mat arg);
-
+void add_fgprocess();
 
 #endif //MY_SHELL_FG_H

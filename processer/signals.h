@@ -6,6 +6,7 @@
 #include "../utils/files.h"
 #include "../utils/processmat.h"
 #include "../processer/prompt.h"
+#include "../commands/fg.h"
 #include <stdlib.h>
 #include <unistd.h>
 #include <signal.h>
