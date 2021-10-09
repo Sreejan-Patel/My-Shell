@@ -12,11 +12,12 @@
 #include "../commands/jobs.h"
 #include "../commands/sig.h"
 #include "../commands/fg.h"
-#include "bgprocess.h"
+#include "../commands/bg.h"
 #include "../commands/execvp.h"
 #include "../commands/pinfo.h"
 #include "redirections.h"
 #include "pipeline.h"
+#include "bgprocess.h"
 
 void tokenize_input(char *input);
 void tokenize(token_mat args_mat);

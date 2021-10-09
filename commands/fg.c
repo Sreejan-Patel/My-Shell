@@ -23,8 +23,6 @@ void command_fg(token_mat arg){
 
     int job_pid = run[job_number-1]->pid;
 
-    printf("[%d] %s %d background process resumed!\n", job_number, run[job_number-1]->name, job_pid);
-
     strcpy(fg_run[0]->name,run[job_number-1]->name);
     fg_run[0]->pid = job_pid;
 
@@ -39,7 +37,12 @@ void command_fg(token_mat arg){
     tcsetpgrp(STDIN_FILENO, job_pid);
 
     // ask job to continue
-    kill(job_pid, SIGCONT);
+    if(kill(job_pid, SIGCONT) < 0){
+        perror("Error SIGCONT! ");
+        return;
+    }
+
+    printf("[%d] %s %d background process resumed in foreground!\n", job_number, fg_run[0]->name, fg_run[0]->pid);
 
     // wait for job to complete
     int stat;

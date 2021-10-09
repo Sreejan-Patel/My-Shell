@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/sreejan/Downloads/clion-2021.2.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/sreejan/Downloads/clion-2021.2.2/bin/cmake/linux/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sreejan/CLionProjects/My_Shell
+CMAKE_SOURCE_DIR = /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sreejan/CLionProjects/My_Shell/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/sreejan/CLionProjects/My_Shell/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/sreejan/Downloads/clion-2021.2.2/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/sreejan/Downloads/clion-2021.2.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sreejan/CLionProjects/My_Shell/cmake-build-debug/CMakeFiles /home/sreejan/CLionProjects/My_Shell/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sreejan/CLionProjects/My_Shell/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,30 @@ My_Shell: cmake_check_build_system
 My_Shell/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/build
 .PHONY : My_Shell/fast
+
+commands/bg.o: commands/bg.c.o
+.PHONY : commands/bg.o
+
+# target to build an object file
+commands/bg.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/commands/bg.c.o
+.PHONY : commands/bg.c.o
+
+commands/bg.i: commands/bg.c.i
+.PHONY : commands/bg.i
+
+# target to preprocess a source file
+commands/bg.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/commands/bg.c.i
+.PHONY : commands/bg.c.i
+
+commands/bg.s: commands/bg.c.s
+.PHONY : commands/bg.s
+
+# target to generate assembly for a file
+commands/bg.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/commands/bg.c.s
+.PHONY : commands/bg.c.s
 
 commands/cd.o: commands/cd.c.o
 .PHONY : commands/cd.o
@@ -618,6 +642,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... My_Shell"
+	@echo "... commands/bg.o"
+	@echo "... commands/bg.i"
+	@echo "... commands/bg.s"
 	@echo "... commands/cd.o"
 	@echo "... commands/cd.i"
 	@echo "... commands/cd.s"
