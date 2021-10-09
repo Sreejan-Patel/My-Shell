@@ -8,22 +8,22 @@ void command_pinfo(token_mat arg){
         char pid[MAX_TOKENS];
         sprintf(pid,"%d",shell_pid);
 
-        printf("PID -- %s\n",pid);
-
         char *stat = status(pid);
         if(stat == NULL)
             return;
-        printf("Process Status -- %s\n", stat);
 
         char *mem = memory(pid);
         if(mem == NULL)
             return;
-        printf("Memory --  %s\n",mem);
 
         char* executable = exe(pid);
         if(executable == NULL)
             return;
-        printf("Executable Path -- %s%s\n",shell, get_relative_path(executable));
+
+        char *success1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(success1,"PID -- %s\nProcess Status -- %s\nMemory --  %s\nExecutable Path -- %s%s\n",pid,stat,mem,shell,get_relative_path(executable));
+        success(success1);
+        free(success1);
     }
     else{
 
@@ -33,22 +33,22 @@ void command_pinfo(token_mat arg){
             p_pid = atoi(arg.args[i]);
             sprintf(pid,"%d",p_pid);
 
-            printf("PID -- %s\n",pid);
-
             char *stat = status(pid);
             if(stat == NULL)
                 return;
-            printf("Process Status -- %s\n", stat);
 
             char *mem = memory(pid);
             if(mem == NULL)
                 return;
-            printf("Memory --  %s\n",mem);
 
-            char* executable = exe(pid);
+            char *executable = exe(pid);
             if(executable == NULL)
                 return;
-            printf("Executable path -- %s\n", executable);
+
+            char *success1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+            sprintf(success1,"PID -- %s\nProcess Status -- %s\nMemory --  %s\nExecutable Path -- %s\n",pid,stat,mem,executable);
+            success(success1);
+            free(success1);
         }
     }
 
@@ -62,13 +62,19 @@ char* status(char* pid){
 
     int fd_status = open(status,O_RDONLY);
     if(fd_status < 0){
-        perror("Error status! ");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: Opening /proc/pid/stat\n");
+        error(error1);
+        free(error1);
         return NULL;
     }
 
     char *temp = malloc(sizeof(char)*1000);
     if(read(fd_status,temp,10000) == 0){
-        perror("Error , couldn't read status! ");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: Reading /proc/pid/stat\n");
+        error(error1);
+        free(error1);
         return NULL;
     }
     close(fd_status);
@@ -84,9 +90,19 @@ char* memory(char* pid){
     strcat(memory,"/statm");
 
     int fd_mem = open(memory,O_RDONLY);
+    if(fd_mem < 0){
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: Opening /proc/pid/statm\n");
+        error(error1);
+        free(error1);
+        return NULL;
+    }
     char *temp1 = malloc(sizeof(char)*1000);
     if(read(fd_mem,temp1,10000) == 0){
-        perror("Error , couldn't read memory! ");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: Reading /proc/pid/statm\n");
+        error(error1);
+        free(error1);
         return NULL;
     }
     close(fd_mem);
@@ -103,7 +119,10 @@ char* exe(char* pid){
     char* temp2 = malloc(sizeof(char)*1000);
     long int check = readlink(exe,temp2,1000);
     if(check < 0){
-        perror("Error Executable Path! ");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: Reading Executable Path\n");
+        error(error1);
+        free(error1);
         return NULL;
     }
     return temp2;

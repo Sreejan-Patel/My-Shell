@@ -585,6 +585,30 @@ utils/inputmat.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/inputmat.c.s
 .PHONY : utils/inputmat.c.s
 
+utils/print.o: utils/print.c.o
+.PHONY : utils/print.o
+
+# target to build an object file
+utils/print.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/print.c.o
+.PHONY : utils/print.c.o
+
+utils/print.i: utils/print.c.i
+.PHONY : utils/print.i
+
+# target to preprocess a source file
+utils/print.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/print.c.i
+.PHONY : utils/print.c.i
+
+utils/print.s: utils/print.c.s
+.PHONY : utils/print.s
+
+# target to generate assembly for a file
+utils/print.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/print.c.s
+.PHONY : utils/print.c.s
+
 utils/process.o: utils/process.c.o
 .PHONY : utils/process.o
 
@@ -723,6 +747,9 @@ help:
 	@echo "... utils/inputmat.o"
 	@echo "... utils/inputmat.i"
 	@echo "... utils/inputmat.s"
+	@echo "... utils/print.o"
+	@echo "... utils/print.i"
+	@echo "... utils/print.s"
 	@echo "... utils/process.o"
 	@echo "... utils/process.i"
 	@echo "... utils/process.s"

@@ -91,7 +91,7 @@ void command_ls(token_mat arg){
             }
             else if(dir.num_args > 1){
                 for(int i = 0 ; i < dir.num_args ; i++){
-                    printf("%s:\n",dir.args[i]);
+                    printf(ANSI_GREEN_BOLD "%s:\n" ANSI_DEFAULT,dir.args[i]);
                     dir_arg(dir.args[i],flag_a,flag_l,flag_la);
                     printf("\n");
                 }
@@ -202,18 +202,22 @@ void ls(char* path,int flag_a){
     int n;
 
     n = scandir(path, &namelist, NULL, alphasort);
-    if (n < 0)
-        perror("Error Scandir!");
+    if (n < 0){
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: ls - scandir\n");
+        error(error1);
+        free(error1);
+    }
     else{
         while(n--){
             if(flag_a == 0){
                 if(namelist[n]->d_name[0] != '.') {
-                    printf("%s\n", namelist[n]->d_name);
+                    printf(ANSI_GREEN_BOLD "%s\n" ANSI_DEFAULT ,namelist[n]->d_name);
                     free(namelist[n]);
                 }
             }
             else{
-                printf("%s\n", namelist[n]->d_name);
+                printf(ANSI_GREEN_BOLD "%s\n" ANSI_DEFAULT, namelist[n]->d_name);
                 free(namelist[n]);
             }
 
@@ -229,12 +233,15 @@ void ls(char* path,int flag_a){
 void ls_l(char* path,int flag_a){
     DIR *dir = opendir(path);
     if(dir == NULL) {
-        perror("Error Opendir!");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: ls_l - opendir\n");
+        error(error1);
+        free(error1);
         return;
     }
 
     long long int total = get_block_size(path,flag_a);
-    printf("total %lld\n",total);
+    printf(ANSI_GREEN_BOLD "total %lld\n" ANSI_DEFAULT ,total);
     struct dirent *input_dir;
     while((input_dir = readdir(dir)) != NULL){
         if(flag_a == 0){
@@ -243,80 +250,83 @@ void ls_l(char* path,int flag_a){
                 char *fp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
                 sprintf(fp, "%s/%s", path, input_dir->d_name);
                 if(stat(fp, &buffer) == -1) {
-                    perror("Error Stat!");
+                    char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+                    sprintf(error1,"Error: ls_l - stat\n");
+                    error(error1);
+                    free(error1);
                     return;
                 }
 
                 // permissions
                 if((S_ISDIR(buffer.st_mode)))
-                    printf("d");
+                    printf(ANSI_GREEN_BOLD "d" ANSI_DEFAULT);
                 else if((S_ISBLK(buffer.st_mode)))
-                    printf("b");
+                    printf(ANSI_GREEN_BOLD "b" ANSI_DEFAULT);
                 else if((S_ISCHR(buffer.st_mode)))
-                    printf("c");
+                    printf(ANSI_GREEN_BOLD "c" ANSI_DEFAULT);
                 else if((S_ISLNK(buffer.st_mode)))
-                    printf("l");
+                    printf(ANSI_GREEN_BOLD "l" ANSI_DEFAULT);
                 else if((S_ISFIFO(buffer.st_mode)))
-                    printf("p");
+                    printf(ANSI_GREEN_BOLD "p" ANSI_DEFAULT);
                 else if((S_ISSOCK(buffer.st_mode)))
-                    printf("s");
+                    printf(ANSI_GREEN_BOLD"s"ANSI_DEFAULT);
                 else if((S_ISREG(buffer.st_mode)))
-                    printf("-");
+                    printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
                 else
-                    printf("n");
+                    printf(ANSI_GREEN_BOLD"n"ANSI_DEFAULT);
 
 
                 if((buffer.st_mode & S_IRUSR))
-                    printf("r");
+                    printf(ANSI_GREEN_BOLD"r"ANSI_DEFAULT);
                 else
-                    printf("-");
+                    printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
                 if((buffer.st_mode & S_IWUSR))
-                    printf("w");
+                    printf(ANSI_GREEN_BOLD"w"ANSI_DEFAULT);
                 else
-                    printf("-");
+                    printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
                 if((buffer.st_mode & S_IXUSR))
-                    printf("x");
+                    printf(ANSI_GREEN_BOLD"x"ANSI_DEFAULT);
                 else
-                    printf("-");
+                    printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
                 if((buffer.st_mode & S_IRGRP))
-                    printf("r");
+                    printf(ANSI_GREEN_BOLD"r"ANSI_DEFAULT);
                 else
-                    printf("-");
+                    printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
                 if((buffer.st_mode & S_IWGRP))
-                    printf("w");
+                    printf(ANSI_GREEN_BOLD"w"ANSI_DEFAULT);
                 else
-                    printf("-");
+                    printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
                 if((buffer.st_mode & S_IXGRP))
-                    printf("x");
+                    printf(ANSI_GREEN_BOLD"x"ANSI_DEFAULT);
                 else
-                    printf("-");
+                    printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
                 if((buffer.st_mode & S_IROTH))
-                    printf("r");
+                    printf(ANSI_GREEN_BOLD"r"ANSI_DEFAULT);
                 else
-                    printf("-");
+                    printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
                 if((buffer.st_mode & S_IWOTH))
-                    printf("w");
+                    printf(ANSI_GREEN_BOLD"w"ANSI_DEFAULT);
                 else
-                    printf("-");
+                    printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
                 if((buffer.st_mode & S_IXOTH))
-                    printf("x");
+                    printf(ANSI_GREEN_BOLD"x"ANSI_DEFAULT);
                 else
-                    printf("-");
+                    printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
                 if((buffer.st_mode & S_IEXEC))
-                    printf("@");
+                    printf(ANSI_GREEN_BOLD"@"ANSI_DEFAULT);
                 else
-                    printf("-");
+                    printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
 
-                printf(" %hu\t", buffer.st_nlink);
+                printf(ANSI_GREEN_BOLD" %hu\t"ANSI_DEFAULT, buffer.st_nlink);
 
 
-                printf("%s ",user_name);
+                printf(ANSI_GREEN_BOLD"%s "ANSI_DEFAULT,user_name);
 
                 struct group *grp;
                 grp = getgrgid(buffer.st_gid);
-                printf("%s ",grp->gr_name);
+                printf(ANSI_GREEN_BOLD"%s "ANSI_DEFAULT,grp->gr_name);
 
-                printf("\t%lld\t", buffer.st_size);
+                printf(ANSI_GREEN_BOLD"\t%lld\t"ANSI_DEFAULT, buffer.st_size);
 
                 long int time0;
                 time(&time0);
@@ -327,18 +337,18 @@ void ls_l(char* path,int flag_a){
                     char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
                     strncpy(time_stamp,time+4,6);
                     strncat(time_stamp,time+19,5);
-                    printf("%s\t",time_stamp);
+                    printf(ANSI_GREEN_BOLD"%s\t"ANSI_DEFAULT,time_stamp);
                     free(time_stamp);
                 }
                 else {
                     char *time = ctime(&buffer.st_mtime);
                     char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
                     strncpy(time_stamp,time+4,12);
-                    printf("%s\t",time_stamp);
+                    printf(ANSI_GREEN_BOLD"%s\t"ANSI_DEFAULT,time_stamp);
                     free(time_stamp);
                 }
 
-                printf("%s\n",input_dir->d_name);
+                printf(ANSI_GREEN_BOLD"%s\n"ANSI_DEFAULT,input_dir->d_name);
             }
         }
         else{
@@ -346,76 +356,79 @@ void ls_l(char* path,int flag_a){
             char *fp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
             sprintf(fp, "%s/%s", path, input_dir->d_name);
             if(stat(fp, &buffer) == -1) {
-                perror("Error Stat!");
+                char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+                sprintf(error1,"Error: ls_l - stat\n");
+                error(error1);
+                free(error1);
                 return;
             }
 
             // permissions
             if((S_ISDIR(buffer.st_mode)))
-                printf("d");
+                printf(ANSI_GREEN_BOLD"d"ANSI_DEFAULT);
             else if((S_ISBLK(buffer.st_mode)))
-                printf("b");
+                printf(ANSI_GREEN_BOLD"b"ANSI_DEFAULT);
             else if((S_ISCHR(buffer.st_mode)))
-                printf("c");
+                printf(ANSI_GREEN_BOLD"c"ANSI_DEFAULT);
             else if((S_ISLNK(buffer.st_mode)))
-                printf("l");
+                printf(ANSI_GREEN_BOLD"l"ANSI_DEFAULT);
             else if((S_ISFIFO(buffer.st_mode)))
-                printf("p");
+                printf(ANSI_GREEN_BOLD"p"ANSI_DEFAULT);
             else if((S_ISSOCK(buffer.st_mode)))
-                printf("s");
+                printf(ANSI_GREEN_BOLD"s"ANSI_DEFAULT);
             else if((S_ISREG(buffer.st_mode)))
-                printf("-");
+                printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
             else
-                printf("n");
+                printf(ANSI_GREEN_BOLD"n"ANSI_DEFAULT);
 
 
             if((buffer.st_mode & S_IRUSR))
-                printf("r");
+                printf(ANSI_GREEN_BOLD"r"ANSI_DEFAULT);
             else
-                printf("-");
+                printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
             if((buffer.st_mode & S_IWUSR))
-                printf("w");
+                printf(ANSI_GREEN_BOLD"w"ANSI_DEFAULT);
             else
-                printf("-");
+                printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
             if((buffer.st_mode & S_IXUSR))
-                printf("x");
+                printf(ANSI_GREEN_BOLD"x"ANSI_DEFAULT);
             else
-                printf("-");
+                printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
             if((buffer.st_mode & S_IRGRP))
-                printf("r");
+                printf(ANSI_GREEN_BOLD"r"ANSI_DEFAULT);
             else
-                printf("-");
+                printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
             if((buffer.st_mode & S_IWGRP))
-                printf("w");
+                printf(ANSI_GREEN_BOLD"w"ANSI_DEFAULT);
             else
-                printf("-");
+                printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
             if((buffer.st_mode & S_IXGRP))
-                printf("x");
+                printf(ANSI_GREEN_BOLD"x"ANSI_DEFAULT);
             else
-                printf("-");
+                printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
             if((buffer.st_mode & S_IROTH))
-                printf("r");
+                printf(ANSI_GREEN_BOLD"r"ANSI_DEFAULT);
             else
-                printf("-");
+                printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
             if((buffer.st_mode & S_IWOTH))
-                printf("w");
+                printf(ANSI_GREEN_BOLD"w"ANSI_DEFAULT);
             else
-                printf("-");
+                printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
             if((buffer.st_mode & S_IXOTH))
-                printf("x");
+                printf(ANSI_GREEN_BOLD"x"ANSI_DEFAULT);
             else
-                printf("-");
+                printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
 
-            printf(" %hu\t", buffer.st_nlink);
+            printf(ANSI_GREEN_BOLD" %hu\t"ANSI_DEFAULT, buffer.st_nlink);
 
 
-            printf("%s ",user_name);
+            printf(ANSI_GREEN_BOLD"%s "ANSI_DEFAULT,user_name);
 
             struct group *grp;
             grp = getgrgid(buffer.st_gid);
-            printf("%s ",grp->gr_name);
+            printf(ANSI_GREEN_BOLD"%s "ANSI_DEFAULT,grp->gr_name);
 
-            printf("\t%lld\t", buffer.st_size);
+            printf(ANSI_GREEN_BOLD"\t%lld\t"ANSI_DEFAULT, buffer.st_size);
 
             long int time0;
             time(&time0);
@@ -426,18 +439,18 @@ void ls_l(char* path,int flag_a){
                 char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
                 strncpy(time_stamp,time+4,6);
                 strncat(time_stamp,time+19,5);
-                printf("%s\t",time_stamp);
+                printf(ANSI_GREEN_BOLD"%s\t"ANSI_DEFAULT,time_stamp);
                 free(time_stamp);
             }
             else {
                 char *time = ctime(&buffer.st_mtime);
                 char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
                 strncpy(time_stamp,time+4,12);
-                printf("%s\t",time_stamp);
+                printf(ANSI_GREEN_BOLD"%s\t"ANSI_DEFAULT,time_stamp);
                 free(time_stamp);
             }
 
-            printf("%s\n",input_dir->d_name);
+            printf(ANSI_GREEN_BOLD"%s\n"ANSI_DEFAULT,input_dir->d_name);
         }
     }
 

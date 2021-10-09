@@ -4,6 +4,7 @@
 #include "../globals.h"
 #include "../utils/util.h"
 #include "../utils/inputmat.h"
+#include "../utils/print.h"
 
 void command_ls(token_mat arg);
 void ls(char* path,int flag_a);

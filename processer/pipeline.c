@@ -21,7 +21,10 @@ void pipeline(token_mat arg,long int repeat){
             pipe_mode++;
             j = 0;
             if(arg.num_args < i + 1){
-                printf("Error! Wrong implementation of pipeline\n");
+                char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+                sprintf(error1,"Error: Wrong Implementation of Pipe Operator\n");
+                error(error1);
+                free(error1);
                 return;
             }
         }
@@ -41,13 +44,19 @@ void pipeline(token_mat arg,long int repeat){
 
     for(int i = 0 ; i <= pipe_num ; i++){
         if(pipe(fd) < 0){
-            perror("Error Piping! ");
+            char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+            sprintf(error1,"Error: Could Not Create Pipeline\n");
+            error(error1);
+            free(error1);
             return;
         }
 
         int pid = fork();
         if(pid < 0){
-            perror("Error forking in pipeline! ");
+            char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+            sprintf(error1,"Error: Forking in Pipeline\n");
+            error(error1);
+            free(error1);
             return;
         }
         else if (pid == 0) {

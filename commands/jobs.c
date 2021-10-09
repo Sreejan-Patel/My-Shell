@@ -2,7 +2,10 @@
 
 void command_jobs(token_mat arg){
     if(arg.num_args > 1){
-        printf("Error Too many arguments!\n");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: jobs - Too many Arguments\n");
+        error(error1);
+        free(error1);
         return;
     }
     char **print_jobs;
@@ -32,7 +35,10 @@ void command_jobs(token_mat arg){
             strcpy(final_stat,"Stopped");
         }
         else {
-            perror("Error status ID! ");
+            char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+            sprintf(error1,"Error: sig - Invalid ID\n");
+            error(error1);
+            free(error1);
             continue;
         }
         if(arg.num_args == 0){
@@ -60,7 +66,10 @@ void command_jobs(token_mat arg){
                     continue;
             }
             else{
-                printf("Error Wrong Flag\n");
+                char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+                sprintf(error1,"Error: sig - Wrong Flag\n");
+                error(error1);
+                free(error1);
                 continue;
             }
         }
@@ -81,7 +90,7 @@ void command_jobs(token_mat arg){
     }
 
     for(int i = 0 ; i < count ; i++){
-        printf("%s\n",print_jobs[i]);
+        printf(ANSI_GREEN_BOLD"%s\n"ANSI_DEFAULT,print_jobs[i]);
         free(print_jobs[i]);
         free(compare_jobs[i]);
     }

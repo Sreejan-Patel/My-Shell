@@ -4,6 +4,7 @@
 #include "../globals.h"
 #include "../utils/inputmat.h"
 #include "../utils/util.h"
+#include "../utils/print.h"
 
 void command_pwd(token_mat arg);
 

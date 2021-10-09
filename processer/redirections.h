@@ -4,6 +4,7 @@
 #include "../globals.h"
 #include "tokenizer.h"
 #include "../utils/inputmat.h"
+#include "../utils/print.h"
 
 void redirections(token_mat arg,long int repeat);
 

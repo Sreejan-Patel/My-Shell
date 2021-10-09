@@ -6,7 +6,10 @@ void command_cd(token_mat arg){
 
     // cd can have only 1 argument
     if(arg.num_args > 1){
-        printf("Too many Arguments!\n");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: cd - Too many Arguments\n");
+        error(error1);
+        free(error1);
         return;
     }
 
@@ -36,7 +39,7 @@ void command_cd(token_mat arg){
                 in_shell = 1;
             else
                 in_shell = 0;
-            printf("%s\n", relative_path);
+            printf(ANSI_GREEN_BOLD"%s\n"ANSI_DEFAULT, relative_path);
             return;
         }
         // if the prev_path is the shell_path
@@ -44,7 +47,7 @@ void command_cd(token_mat arg){
             prev_path = get_curr_path();
             chdir(shell_path);
             in_shell = 1;
-            printf("%s\n",shell);
+            printf(ANSI_GREEN_BOLD"%s\n"ANSI_DEFAULT,shell);
             return;
         }
     }
@@ -57,7 +60,10 @@ void command_cd(token_mat arg){
     else if (arg.args[1][0] == '~' && arg.args[1][1] == '/') {
         chdir(shell_path);
         if (chdir(arg.args[1] + 2) < 0) {
-            printf("Error!No such file or directory\n");
+            char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+            sprintf(error1,"Error: cd - No such File or Directory\n");
+            error(error1);
+            free(error1);
             chdir(prev_path);
             return;
         }
@@ -65,7 +71,10 @@ void command_cd(token_mat arg){
     }
     else if (arg.args[1][0] != '-') {
         if (chdir(arg.args[1]) < 0) {
-            printf("Error!No such file or directory\n");
+            char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+            sprintf(error1,"Error: cd - No such File or Directory\n");
+            error(error1);
+            free(error1);
             return;
         }
     }

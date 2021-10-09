@@ -4,6 +4,7 @@
 #include "../globals.h"
 #include "../utils/inputmat.h"
 #include "../utils/processmat.h"
+#include "../utils/print.h"
 #include "../commands/pinfo.h"
 
 void command_bg(token_mat arg);

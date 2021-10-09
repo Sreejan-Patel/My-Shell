@@ -4,6 +4,7 @@
 #include "../globals.h"
 #include "inputmat.h"
 #include "processmat.h"
+#include "print.h"
 
 void add_process(token_mat arg,int child);
 void delete_process(int job_number);

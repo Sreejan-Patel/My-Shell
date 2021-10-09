@@ -4,6 +4,7 @@
 #include "../globals.h"
 #include "../utils/util.h"
 #include "../utils/inputmat.h"
+#include "../utils/print.h"
 
 void command_pinfo(token_mat arg);
 char *status(char* pid);

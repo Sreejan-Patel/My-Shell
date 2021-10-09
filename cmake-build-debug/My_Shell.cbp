@@ -189,6 +189,12 @@
 		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/inputmat.h">
 			<Option target="My_Shell"/>
 		</Unit>
+		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/print.c">
+			<Option target="My_Shell"/>
+		</Unit>
+		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/print.h">
+			<Option target="My_Shell"/>
+		</Unit>
 		<Unit filename="/Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/utils/process.c">
 			<Option target="My_Shell"/>
 		</Unit>

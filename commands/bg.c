@@ -2,7 +2,10 @@
 
 void command_bg(token_mat arg){
     if(arg.num_args != 1){
-        printf("Error Invalid Arguments!\n");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: bg - Wrong Arguments\n");
+        error(error1);
+        free(error1);
         return;
     }
 
@@ -17,7 +20,10 @@ void command_bg(token_mat arg){
     int job_number = atoi(arg.args[1]);
 
     if(job_number < 1 || job_number > count+1){
-        printf("Error Invalid job_number!\n");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: bg - Invalid Job Number\n");
+        error(error1);
+        free(error1);
         return;
     }
 
@@ -28,15 +34,20 @@ void command_bg(token_mat arg){
     if(stat == NULL)
         return;
     if(strcmp(stat,"R") == 0 || strcmp(stat,"S") == 0){
-        printf("The background process is already running!\n");
+        printf(ANSI_GREEN_BOLD"The Background process is already Running\n"ANSI_DEFAULT);
         return;
     }
     if(kill(job_pid, SIGCONT) < 0){
-        perror("Error SIGCONT! ");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: bg - kill:SIGCONT\n");
+        error(error1);
+        free(error1);
         return;
     }
 
-    printf("[%d] %s [%d] stopped background process resumed in background!\n", job_number, run[job_number-1]->name, job_pid);
-
+    char *success1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+    sprintf(success1,"[%d] %s [%d] Stopped Background process resumed in Background\n", job_number, run[job_number-1]->name, job_pid);
+    success(success1);
+    free(success1);
 
 }

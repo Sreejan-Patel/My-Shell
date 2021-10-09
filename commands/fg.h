@@ -5,6 +5,7 @@
 #include "../utils/inputmat.h"
 #include "../utils/processmat.h"
 #include "../utils/process.h"
+#include "../utils/print.h"
 #include "../processer/bgprocess.h"
 #include "../commands/pinfo.h"
 

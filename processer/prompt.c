@@ -26,51 +26,21 @@ void initialize(){
 void prompt_print(){
 
     char* current_path = get_curr_path();
+    char* prompt1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
 
-    if(is_bg){
-        if(in_shell){
-            if(strcmp(shell_path,current_path) == 0){
-                printf("<%s@",get_user_name());
-                get_system_name();
-                printf("%s>>",shell);
-            }
-            else{
-                printf("<%s@",get_user_name());
-                get_system_name();
-                printf("%s",shell);
-                printf("%s>>",get_relative_path(current_path));
-            }
+    if(in_shell){
+        if(strcmp(shell_path,current_path) == 0){
+            sprintf(prompt1,"<%s@%s:%s>",get_user_name(),get_system_name(),shell);
+            prompt(prompt1);
         }
-        else{                                       //outside the shell directory
-            printf("<%s@",get_user_name());
-            get_system_name();
-            printf("%s>",current_path);
-
+        else{
+            sprintf(prompt1,"<%s@%s:%s%s>",get_user_name(),get_system_name(),shell, get_relative_path(current_path));
+            prompt(prompt1);
         }
     }
-    else{
-        if(in_shell){
-            if(strcmp(shell_path,current_path) == 0){
-                printf("<%s@",get_user_name());
-                get_system_name();
-                printf("%s>",shell);
-            }
-            else{
-                printf("<%s@",get_user_name());
-                get_system_name();
-                printf("%s",shell);
-                printf("%s>",get_relative_path(current_path));
-            }
-        }
-        else{                                       //outside the shell directory
-            printf("<%s@",get_user_name());
-            get_system_name();
-            printf("%s>",current_path);
-
-        }
+    else{                                       //outside the shell directory
+        sprintf(prompt1,"<%s@%s:%s>",get_user_name(),get_system_name(),current_path);
+        prompt(prompt1);
     }
-
-
-
-
+    free(prompt1);
 }

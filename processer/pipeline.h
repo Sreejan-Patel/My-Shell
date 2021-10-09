@@ -4,6 +4,7 @@
 #include "../globals.h"
 #include "redirections.h"
 #include "../utils/inputmat.h"
+#include "../utils/print.h"
 
 void pipeline(token_mat arg,long int repeat);
 

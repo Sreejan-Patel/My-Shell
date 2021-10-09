@@ -13,6 +13,7 @@ consists of the following -
 void clear_screen(){
     const char *CLEAR_SCREEN_ANSI = "\e[1;1H\e[2J";
     write(STDOUT_FILENO, CLEAR_SCREEN_ANSI, strlen(CLEAR_SCREEN_ANSI));
+    printf(ANSI_YELLOW_BOLD "\n\t\t\t\t\t\t\t\t---\tWelcome To My_Shell\t---\t\t\t\t\t\t\t\t\n" ANSI_DEFAULT);
 }
 
 char* get_user_name(){
@@ -23,16 +24,20 @@ char* get_user_name(){
     return user_name;
 }
 
-void get_system_name(){
+char* get_system_name(){
 
     int flag;
     system_name = malloc(sizeof(char)*MAX_NAME_LENGTH);
     flag = gethostname(system_name,MAX_NAME_LENGTH);
     if(flag < 0){
-        perror("System Name!");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: gethostname\n");
+        error(error1);
+        free(error1);
+        return NULL;
     }
 
-    printf("%s:",system_name);
+    return system_name;
     /*
     int flag;
     struct utsname unameData;

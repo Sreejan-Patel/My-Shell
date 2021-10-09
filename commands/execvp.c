@@ -12,7 +12,10 @@ void command_execvp(token_mat arg){
     }
     int child = fork();
     if(child == -1){
-        perror("Error, Could not fork child! ");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: execvp - Could not fork\n");
+        error(error1);
+        free(error1);
     }
     else if(child == 0) {
         // child process
@@ -33,13 +36,19 @@ void command_execvp(token_mat arg){
         if (is_bg) {
             temp[i-1] = NULL;
             if (execvp(temp[0], temp) < 0){     //If the command does not exist
-                perror("Error execvp! ");
+                char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+                sprintf(error1,"Error: execvp - No File or Command or Directory\n");
+                error(error1);
+                free(error1);
                 exit(1);
             }
         }
         else {
             if (execvp(temp[0], temp) < 0) { //If the command does not exist
-                perror("Error execvp! ");
+                char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+                sprintf(error1,"Error: execvp - No File or Command or Directory\n");
+                error(error1);
+                free(error1);
                 exit(1);
             }
         }
@@ -60,7 +69,7 @@ void command_execvp(token_mat arg){
         }
         else {
             add_process(arg,child);
-            printf("%d\n",child);
+            printf(ANSI_GREEN_BOLD"%d\n"ANSI_DEFAULT,child);
         }
     }
 }

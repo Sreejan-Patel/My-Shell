@@ -4,6 +4,7 @@
 #include "../globals.h"
 #include "../utils/processmat.h"
 #include "../utils/inputmat.h"
+#include "../utils/print.h"
 
 void command_sig(token_mat arg);
 

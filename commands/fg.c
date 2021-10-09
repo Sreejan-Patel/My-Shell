@@ -2,7 +2,10 @@
 
 void command_fg(token_mat arg){
     if(arg.num_args != 1){
-        printf("Error Invalid Arguments!\n");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: fg - Wrong Arguments\n");
+        error(error1);
+        free(error1);
         return;
     }
 
@@ -17,7 +20,10 @@ void command_fg(token_mat arg){
     int job_number = atoi(arg.args[1]);
 
     if(job_number < 1 || job_number > count+1){
-        printf("Error Invalid job_number!\n");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: sig - Invalid Job NUmber\n");
+        error(error1);
+        free(error1);
         return;
     }
 
@@ -42,7 +48,10 @@ void command_fg(token_mat arg){
         return;
     }
 
-    printf("[%d] %s [%d] background process resumed in foreground!\n", job_number, fg_run[0]->name, fg_run[0]->pid);
+    char *alert1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+    sprintf(alert1,"Alert: [%d] %s [%d] Background process resumed in Foreground\n", job_number, fg_run[0]->name, fg_run[0]->pid);
+    alert(alert1);
+    free(alert1);
 
     // wait for job to complete
     int stat;
@@ -56,11 +65,17 @@ void command_fg(token_mat arg){
     signal(SIGTTOU, SIG_DFL);
 
     if(WIFSTOPPED(stat)){
-        printf("%s process with ID %d has been stopped!\n",fg_run[0]->name,job_pid);
+        char *alert2 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(alert2,"\tAlert: %s process with ID %d has been stopped by CTRL-Z\n",fg_run[0]->name,job_pid);
+        alert(alert2);
+        free(alert2);
         add_fgprocess();
     }
     else if(WIFSIGNALED(stat)){
-        printf("%s process with ID %d has received a signal %d!\n",fg_run[0]->name,job_pid, WTERMSIG(stat));
+        char *alert2 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(alert2,"\tAlert: %s process with ID %d has received a signal %d\n",fg_run[0]->name,job_pid, WTERMSIG(stat));
+        alert(alert2);
+        free(alert2);
     }
 
 }

@@ -32,7 +32,10 @@ int main() {
         while (1) {
             temp = (char)getchar();
             if(temp == '\377'){
-                printf("\nExiting My_Shell\n");
+                char *exit1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+                sprintf(exit1,"Exiting -- My_Shell");
+                prompt_exit(exit1);
+                free(exit1);
                 exit(0);
             }
             else if (temp != '\n')

@@ -5,6 +5,7 @@
 #include "../globals.h"
 #include "../utils/processmat.h"
 #include "../utils/process.h"
+#include "../utils/print.h"
 
 void print_finished_bgprocess();
 

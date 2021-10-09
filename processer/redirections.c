@@ -41,7 +41,10 @@ void redirections(token_mat arg,long int repeat){
     if(strlen(input_file) != 0){
         fd_in = open(input_file,O_RDONLY);
         if(fd_in < 0){
-            perror("Error , Input file!");
+            char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+            sprintf(error1,"Error: Opening Input Redirection File\n");
+            error(error1);
+            free(error1);
             return;
         }
         dup2(fd_in,STDIN_FILENO);
@@ -56,7 +59,10 @@ void redirections(token_mat arg,long int repeat){
 
         fd_out = open(output_file,O_CREAT | O_WRONLY | write_mode , 0644);
         if(fd_out < 0){
-            perror("Error , Output file!");
+            char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+            sprintf(error1,"Error: Opening Output Redirection File\n");
+            error(error1);
+            free(error1);
             return;
         }
         dup2(fd_out,STDOUT_FILENO);

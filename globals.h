@@ -22,6 +22,14 @@
 #define MAX_PATH_LENGTH 1024
 #define MAX_NAME_LENGTH 1024
 
+#define ANSI_RED_BOLD "\033[1;31m"
+#define ANSI_GREEN_BOLD "\033[1;32m"
+#define ANSI_YELLOW_BOLD "\033[1;33m"
+#define ANSI_BLUE_BOLD "\033[1;34m"
+#define ANSI_PURPLE_BOLD "\033[1;35m"
+#define ANSI_CYAN_BOLD "\033[1;36m"
+#define ANSI_DEFAULT "\033[0m"
+
 extern char *shell_path;
 extern char *prev_path;
 extern char *shell;

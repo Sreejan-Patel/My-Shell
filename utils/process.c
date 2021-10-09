@@ -16,7 +16,10 @@ void add_process(token_mat arg,int child){
             continue;
     }
     if(j == MAX_TOKENS){
-        printf("Error- Max no of jobs reached!\n");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: Max Jobs Reached - Job not added\n");
+        error(error1);
+        free(error1);
         return;
     }
 }
@@ -42,7 +45,10 @@ void add_fgprocess(){
         }
     }
     if(i == MAX_TOKENS){
-        printf("Error- Max no of jobs reached!\n");
+        char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+        sprintf(error1,"Error: Max Jobs Reached - Job not added\n");
+        error(error1);
+        free(error1);
         return;
     }
     strcpy(fg_run[0]->name,"\0");

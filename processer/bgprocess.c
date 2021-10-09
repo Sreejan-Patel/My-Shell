@@ -15,11 +15,17 @@ void print_finished_bgprocess(){
         for(int i = 0; i < MAX_TOKENS ; i++){
             if(run[i]->pid == pid){
                 if (WIFEXITED(status) && WEXITSTATUS(status) == EXIT_SUCCESS) {
-                    printf("%s with pid %d exited normally with status %d\n", run[i]->name, run[i]->pid, WEXITSTATUS(status));
+                    char *alert1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+                    sprintf(alert1,"\tAlert: %s with pid %d exited normally with status %d\n",run[i]->name, run[i]->pid, WEXITSTATUS(status));
+                    alert(alert1);
+                    free(alert1);
                     delete_process(i);
                 }
                 else{
-                    printf("%s with pid %d exited abnormally with error status %d\n", run[i]->name, run[i]->pid, WEXITSTATUS(status));
+                    char *alert1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
+                    sprintf(alert1,"\tAlert: %s with pid %d exited abnormally with status %d\n",run[i]->name, run[i]->pid, WEXITSTATUS(status));
+                    alert(alert1);
+                    free(alert1);
                     delete_process(i);
                 }
             }
