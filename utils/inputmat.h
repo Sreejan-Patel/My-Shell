@@ -2,13 +2,6 @@
 #define MY_SHELL_INPUTMAT_H
 
 #include "../globals.h"
-#include "../processer/prompt.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <sys/stat.h>
-#include <unistd.h>
-#include "../processer/tokenizer.h"
-
 
 struct arg_mat {
     char **args;

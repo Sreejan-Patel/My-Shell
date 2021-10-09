@@ -1,10 +1,11 @@
 #ifndef MY_SHELL_TOKENIZER_H
 #define MY_SHELL_TOKENIZER_H
 
-#include "../utils/files.h"
 #include "../globals.h"
-#include <stdlib.h>
+
 #include "../utils/inputmat.h"
+#include "../utils/util.h"
+
 #include "../commands/echo.h"
 #include "../commands/pwd.h"
 #include "../commands/cd.h"
@@ -15,6 +16,7 @@
 #include "../commands/bg.h"
 #include "../commands/execvp.h"
 #include "../commands/pinfo.h"
+
 #include "redirections.h"
 #include "pipeline.h"
 #include "bgprocess.h"

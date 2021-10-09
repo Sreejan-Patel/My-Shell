@@ -6,8 +6,6 @@ void command_pinfo(token_mat arg){
 
     if(!arg.num_args){
         char pid[MAX_TOKENS];
-        int shell_pid;
-        shell_pid = getpid();
         sprintf(pid,"%d",shell_pid);
 
         printf("PID -- %s\n",pid);

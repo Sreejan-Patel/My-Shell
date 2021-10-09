@@ -1,19 +1,9 @@
 #ifndef MY_SHELL_LS_H
 #define MY_SHELL_LS_H
 
-#include "../utils/files.h"
-#include "../utils/inputmat.h"
-#include "../processer/prompt.h"
-#include "../processer/tokenizer.h"
 #include "../globals.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <dirent.h>
-#include <sys/stat.h>
-#include <grp.h>
-#include <time.h>
-#include <math.h>
+#include "../utils/util.h"
+#include "../utils/inputmat.h"
 
 void command_ls(token_mat arg);
 void ls(char* path,int flag_a);

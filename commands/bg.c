@@ -25,7 +25,8 @@ void command_bg(token_mat arg){
     char pid[MAX_TOKENS];
     sprintf(pid,"%d",job_pid);
     char* stat = status(pid);
-
+    if(stat == NULL)
+        return;
     if(strcmp(stat,"R") == 0 || strcmp(stat,"S") == 0){
         printf("The background process is already running!\n");
         return;

@@ -2,11 +2,8 @@
 #define MY_SHELL_CD_H
 
 #include "../globals.h"
-#include "../utils/files.h"
+#include "../utils/util.h"
 #include "../utils/inputmat.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 
 void command_cd(token_mat arg);
 

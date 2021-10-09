@@ -1,4 +1,4 @@
-#include "files.h"
+#include "util.h"
 
 /*
 consists of the following -
@@ -16,7 +16,7 @@ void clear_screen(){
 }
 
 char* get_user_name(){
-    user_name = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
+    user_name = malloc(sizeof(char)*MAX_NAME_LENGTH);
     struct passwd *user = getpwuid(getuid());
     strcpy(user_name,user->pw_name);
 
@@ -26,8 +26,8 @@ char* get_user_name(){
 void get_system_name(){
 
     int flag;
-    system_name = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
-    flag = gethostname(system_name,MAX_TOKEN_LENGTH);
+    system_name = malloc(sizeof(char)*MAX_NAME_LENGTH);
+    flag = gethostname(system_name,MAX_NAME_LENGTH);
     if(flag < 0){
         perror("System Name!");
     }

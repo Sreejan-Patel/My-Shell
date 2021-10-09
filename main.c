@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include "utils/files.h"
 #include "globals.h"
 #include "processer/prompt.h"
 #include "processer/tokenizer.h"

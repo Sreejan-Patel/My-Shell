@@ -14,5 +14,3 @@ int shell_pid;
 
 struct process **run;
 struct process **fg_run;
-
-struct termios terminal;

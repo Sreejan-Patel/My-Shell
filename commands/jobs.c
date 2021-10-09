@@ -22,15 +22,16 @@ void command_jobs(token_mat arg){
         if (stat == NULL) {
             continue;
         }
-        else if (strcmp(stat,"R") == 0) {
+        else if (strcmp(stat,"R") == 0 || strcmp(stat,"S") == 0) {
             strcpy(final_stat,"Running");
-        } else if (strcmp(stat,"S") == 0) {
-            strcpy(final_stat,"Running");
-        } else if (strcmp(stat,"Z") == 0) {
+        }
+        else if (strcmp(stat,"Z") == 0) {
             strcpy(final_stat,"Zombie");
-        } else if (strcmp(stat,"T") == 0) {
+        }
+        else if (strcmp(stat,"T") == 0) {
             strcpy(final_stat,"Stopped");
-        } else {
+        }
+        else {
             perror("Error status ID! ");
             continue;
         }
