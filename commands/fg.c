@@ -42,7 +42,7 @@ void command_fg(token_mat arg){
         return;
     }
 
-    printf("[%d] %s %d background process resumed in foreground!\n", job_number, fg_run[0]->name, fg_run[0]->pid);
+    printf("[%d] %s [%d] background process resumed in foreground!\n", job_number, fg_run[0]->name, fg_run[0]->pid);
 
     // wait for job to complete
     int stat;
