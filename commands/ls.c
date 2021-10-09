@@ -317,7 +317,7 @@ void ls_l(char* path,int flag_a){
                 else
                     printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
 
-                printf(ANSI_GREEN_BOLD" %lu\t"ANSI_DEFAULT, buffer.st_nlink);
+                printf(ANSI_GREEN_BOLD" %hu\t"ANSI_DEFAULT, buffer.st_nlink);
 
 
                 printf(ANSI_GREEN_BOLD"%s "ANSI_DEFAULT,user_name);
@@ -326,7 +326,7 @@ void ls_l(char* path,int flag_a){
                 grp = getgrgid(buffer.st_gid);
                 printf(ANSI_GREEN_BOLD"%s "ANSI_DEFAULT,grp->gr_name);
 
-                printf(ANSI_GREEN_BOLD"\t%ld\t"ANSI_DEFAULT, buffer.st_size);
+                printf(ANSI_GREEN_BOLD"\t%lld\t"ANSI_DEFAULT, buffer.st_size);
 
                 long int time0;
                 time(&time0);
@@ -419,7 +419,7 @@ void ls_l(char* path,int flag_a){
             else
                 printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
 
-            printf(ANSI_GREEN_BOLD" %lu\t"ANSI_DEFAULT, buffer.st_nlink);
+            printf(ANSI_GREEN_BOLD" %hu\t"ANSI_DEFAULT, buffer.st_nlink);
 
 
             printf(ANSI_GREEN_BOLD"%s "ANSI_DEFAULT,user_name);
@@ -428,7 +428,7 @@ void ls_l(char* path,int flag_a){
             grp = getgrgid(buffer.st_gid);
             printf(ANSI_GREEN_BOLD"%s "ANSI_DEFAULT,grp->gr_name);
 
-            printf(ANSI_GREEN_BOLD"\t%ld\t"ANSI_DEFAULT, buffer.st_size);
+            printf(ANSI_GREEN_BOLD"\t%lld\t"ANSI_DEFAULT, buffer.st_size);
 
             long int time0;
             time(&time0);
@@ -469,9 +469,9 @@ long long int get_block_size(char* directory,int flag_a) {
     d = opendir(directory);
     if (d) {
         while ((dir = readdir(d)) != NULL) {
+            char info_path[MAX_TOKEN_LENGTH + 1];
             if(flag_a == 0){
                 if (dir->d_name[0] != '.') {                                // Ignore hidden files
-                    char info_path[MAX_TOKEN_LENGTH + 1];
                     strcpy(info_path, directory);
                     if (directory[strlen(directory) - 1] != '/')
                         strcat(info_path, "/");
@@ -483,7 +483,6 @@ long long int get_block_size(char* directory,int flag_a) {
                 }
             }
             else{
-                char info_path[MAX_TOKEN_LENGTH + 1];
                 strcpy(info_path, directory);
                 if (directory[strlen(directory) - 1] != '/')
                     strcat(info_path, "/");
