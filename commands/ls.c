@@ -317,7 +317,7 @@ void ls_l(char* path,int flag_a){
                 else
                     printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
 
-                printf(ANSI_GREEN_BOLD" %hu\t"ANSI_DEFAULT, buffer.st_nlink);
+                printf(ANSI_GREEN_BOLD" %lu\t"ANSI_DEFAULT, buffer.st_nlink);
 
 
                 printf(ANSI_GREEN_BOLD"%s "ANSI_DEFAULT,user_name);
@@ -326,7 +326,7 @@ void ls_l(char* path,int flag_a){
                 grp = getgrgid(buffer.st_gid);
                 printf(ANSI_GREEN_BOLD"%s "ANSI_DEFAULT,grp->gr_name);
 
-                printf(ANSI_GREEN_BOLD"\t%lld\t"ANSI_DEFAULT, buffer.st_size);
+                printf(ANSI_GREEN_BOLD"\t%ld\t"ANSI_DEFAULT, buffer.st_size);
 
                 long int time0;
                 time(&time0);
@@ -419,7 +419,7 @@ void ls_l(char* path,int flag_a){
             else
                 printf(ANSI_GREEN_BOLD"-"ANSI_DEFAULT);
 
-            printf(ANSI_GREEN_BOLD" %hu\t"ANSI_DEFAULT, buffer.st_nlink);
+            printf(ANSI_GREEN_BOLD" %lu\t"ANSI_DEFAULT, buffer.st_nlink);
 
 
             printf(ANSI_GREEN_BOLD"%s "ANSI_DEFAULT,user_name);
@@ -428,7 +428,7 @@ void ls_l(char* path,int flag_a){
             grp = getgrgid(buffer.st_gid);
             printf(ANSI_GREEN_BOLD"%s "ANSI_DEFAULT,grp->gr_name);
 
-            printf(ANSI_GREEN_BOLD"\t%lld\t"ANSI_DEFAULT, buffer.st_size);
+            printf(ANSI_GREEN_BOLD"\t%ld\t"ANSI_DEFAULT, buffer.st_size);
 
             long int time0;
             time(&time0);
