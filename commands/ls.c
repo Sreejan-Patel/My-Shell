@@ -328,25 +328,13 @@ void ls_l(char* path,int flag_a){
 
                 printf(ANSI_GREEN_BOLD"\t%lld\t"ANSI_DEFAULT, buffer.st_size);
 
-                long int time0;
-                time(&time0);
-                long int time1 = buffer.st_mtime;
-                long double sec = difftime(time0,time1);
-                if(sec >= 15636400){
-                    char *time = ctime(&buffer.st_mtime);
+
                     char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
-                    strncpy(time_stamp,time+4,6);
-                    strncat(time_stamp,time+19,5);
-                    printf(ANSI_GREEN_BOLD"%s\t"ANSI_DEFAULT,time_stamp);
+                    ctime_r(&buffer.st_mtime,time_stamp);
+                    time_stamp[16] = 0;
+                    printf(ANSI_GREEN_BOLD"%s\t"ANSI_DEFAULT,time_stamp+4);
                     free(time_stamp);
-                }
-                else {
-                    char *time = ctime(&buffer.st_mtime);
-                    char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
-                    strncpy(time_stamp,time+4,12);
-                    printf(ANSI_GREEN_BOLD"%s\t"ANSI_DEFAULT,time_stamp);
-                    free(time_stamp);
-                }
+
 
                 printf(ANSI_GREEN_BOLD"%s\n"ANSI_DEFAULT,input_dir->d_name);
             }
@@ -430,25 +418,11 @@ void ls_l(char* path,int flag_a){
 
             printf(ANSI_GREEN_BOLD"\t%lld\t"ANSI_DEFAULT, buffer.st_size);
 
-            long int time0;
-            time(&time0);
-            long int time1 = buffer.st_mtime;
-            long double sec = difftime(time0,time1);
-            if(sec >= 15636400){
-                char *time = ctime(&buffer.st_mtime);
-                char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
-                strncpy(time_stamp,time+4,6);
-                strncat(time_stamp,time+19,5);
-                printf(ANSI_GREEN_BOLD"%s\t"ANSI_DEFAULT,time_stamp);
-                free(time_stamp);
-            }
-            else {
-                char *time = ctime(&buffer.st_mtime);
-                char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
-                strncpy(time_stamp,time+4,12);
-                printf(ANSI_GREEN_BOLD"%s\t"ANSI_DEFAULT,time_stamp);
-                free(time_stamp);
-            }
+            char *time_stamp = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
+            ctime_r(&buffer.st_mtime,time_stamp);
+            time_stamp[16] = 0;
+            printf(ANSI_GREEN_BOLD"%s\t"ANSI_DEFAULT,time_stamp+4);
+            free(time_stamp);
 
             printf(ANSI_GREEN_BOLD"%s\n"ANSI_DEFAULT,input_dir->d_name);
         }
