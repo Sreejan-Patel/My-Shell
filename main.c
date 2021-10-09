@@ -11,6 +11,7 @@ int main() {
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "EndlessLoop"
     while(!0){
+
         fg_run[0]->pid = -1;
         print_finished_bgprocess();
 
@@ -20,8 +21,8 @@ int main() {
 
         else
             is_bg = 1;
-        prompt_print();     //prints prompt
 
+        prompt_print();     //prints prompt
 
         // take input
         char temp;

@@ -4,6 +4,7 @@
 #include "../globals.h"
 #include "../utils/inputmat.h"
 #include "../utils/processmat.h"
+#include "../utils/process.h"
 
 void command_execvp(token_mat arg);
 void add_process(token_mat arg,int child);

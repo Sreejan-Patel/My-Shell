@@ -17,9 +17,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/My_Shell.dir/processer/redirections.c.o"
   "CMakeFiles/My_Shell.dir/processer/signals.c.o"
   "CMakeFiles/My_Shell.dir/processer/tokenizer.c.o"
-  "CMakeFiles/My_Shell.dir/utils/files.c.o"
   "CMakeFiles/My_Shell.dir/utils/inputmat.c.o"
+  "CMakeFiles/My_Shell.dir/utils/process.c.o"
   "CMakeFiles/My_Shell.dir/utils/processmat.c.o"
+  "CMakeFiles/My_Shell.dir/utils/util.c.o"
   "My_Shell"
   "My_Shell.pdb"
 )

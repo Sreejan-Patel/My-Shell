@@ -3,7 +3,7 @@
 
 #include "../globals.h"
 #include "../processer/prompt.h"
-#include "../commands/fg.h"
+#include "../utils/process.h"
 
 void initialize_signals();
 void sigtstp_handler(int sig_num);

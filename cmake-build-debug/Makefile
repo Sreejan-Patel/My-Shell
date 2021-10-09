@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/sreejan/Downloads/clion-2021.2.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/sreejan/Downloads/clion-2021.2.2/bin/cmake/linux/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sreejan/CLionProjects/My_Shell
+CMAKE_SOURCE_DIR = /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sreejan/CLionProjects/My_Shell/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/sreejan/CLionProjects/My_Shell/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/sreejan/Downloads/clion-2021.2.2/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/sreejan/Downloads/clion-2021.2.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sreejan/CLionProjects/My_Shell/cmake-build-debug/CMakeFiles /home/sreejan/CLionProjects/My_Shell/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sreejan/CLionProjects/My_Shell/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sreejanpatel/Desktop/IIIT/OSN/Assignments/My_Shell/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -561,30 +561,6 @@ processer/tokenizer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/processer/tokenizer.c.s
 .PHONY : processer/tokenizer.c.s
 
-utils/files.o: utils/files.c.o
-.PHONY : utils/files.o
-
-# target to build an object file
-utils/files.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/files.c.o
-.PHONY : utils/files.c.o
-
-utils/files.i: utils/files.c.i
-.PHONY : utils/files.i
-
-# target to preprocess a source file
-utils/files.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/files.c.i
-.PHONY : utils/files.c.i
-
-utils/files.s: utils/files.c.s
-.PHONY : utils/files.s
-
-# target to generate assembly for a file
-utils/files.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/files.c.s
-.PHONY : utils/files.c.s
-
 utils/inputmat.o: utils/inputmat.c.o
 .PHONY : utils/inputmat.o
 
@@ -609,6 +585,30 @@ utils/inputmat.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/inputmat.c.s
 .PHONY : utils/inputmat.c.s
 
+utils/process.o: utils/process.c.o
+.PHONY : utils/process.o
+
+# target to build an object file
+utils/process.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/process.c.o
+.PHONY : utils/process.c.o
+
+utils/process.i: utils/process.c.i
+.PHONY : utils/process.i
+
+# target to preprocess a source file
+utils/process.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/process.c.i
+.PHONY : utils/process.c.i
+
+utils/process.s: utils/process.c.s
+.PHONY : utils/process.s
+
+# target to generate assembly for a file
+utils/process.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/process.c.s
+.PHONY : utils/process.c.s
+
 utils/processmat.o: utils/processmat.c.o
 .PHONY : utils/processmat.o
 
@@ -632,6 +632,30 @@ utils/processmat.s: utils/processmat.c.s
 utils/processmat.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/processmat.c.s
 .PHONY : utils/processmat.c.s
+
+utils/util.o: utils/util.c.o
+.PHONY : utils/util.o
+
+# target to build an object file
+utils/util.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/util.c.o
+.PHONY : utils/util.c.o
+
+utils/util.i: utils/util.c.i
+.PHONY : utils/util.i
+
+# target to preprocess a source file
+utils/util.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/util.c.i
+.PHONY : utils/util.c.i
+
+utils/util.s: utils/util.c.s
+.PHONY : utils/util.s
+
+# target to generate assembly for a file
+utils/util.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My_Shell.dir/build.make CMakeFiles/My_Shell.dir/utils/util.c.s
+.PHONY : utils/util.c.s
 
 # Help Target
 help:
@@ -696,15 +720,18 @@ help:
 	@echo "... processer/tokenizer.o"
 	@echo "... processer/tokenizer.i"
 	@echo "... processer/tokenizer.s"
-	@echo "... utils/files.o"
-	@echo "... utils/files.i"
-	@echo "... utils/files.s"
 	@echo "... utils/inputmat.o"
 	@echo "... utils/inputmat.i"
 	@echo "... utils/inputmat.s"
+	@echo "... utils/process.o"
+	@echo "... utils/process.i"
+	@echo "... utils/process.s"
 	@echo "... utils/processmat.o"
 	@echo "... utils/processmat.i"
 	@echo "... utils/processmat.s"
+	@echo "... utils/util.o"
+	@echo "... utils/util.i"
+	@echo "... utils/util.s"
 .PHONY : help
 
 

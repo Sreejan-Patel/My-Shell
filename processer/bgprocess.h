@@ -4,8 +4,8 @@
 
 #include "../globals.h"
 #include "../utils/processmat.h"
+#include "../utils/process.h"
 
 void print_finished_bgprocess();
-void delete_process(int job_number);
 
 #endif //MY_SHELL_BGPROCESS_H
