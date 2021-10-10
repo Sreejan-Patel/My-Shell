@@ -25,7 +25,7 @@ void print_finished_bgprocess(){
                     continue;
                 else{                           // signaled/forcefully terminated
                     char *alert1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
-                    sprintf(alert1,"\t\nAlert: %s with pid %d exited abnormally with error code %d\n",run[i]->name, run[i]->pid, WIFSIGNALED(status));
+                    sprintf(alert1,"\t\nAlert: %s with pid %d exited abnormally with status %d\n",run[i]->name, run[i]->pid, WEXITSTATUS(status));
                     alert(alert1);
                     free(alert1);
                     delete_process(i);
