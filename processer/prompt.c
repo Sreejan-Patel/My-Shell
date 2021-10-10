@@ -18,7 +18,7 @@ void initialize(){
     make_fgprocess_mat();
 
     initialize_signals();
-
+    signal(SIGCHLD,print_finished_bgprocess);
 }
 
 // prints the prompt as specified and if there is any bgprocess running a smiley face lets you know

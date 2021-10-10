@@ -45,13 +45,5 @@ void command_sig(token_mat arg){
         free(error1);
         return;
     }
-    else{
-        char *success1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
-        sprintf(success1,"Signal sent to Job with Job Number [%d]\n",job_number);
-        success(success1);
-        free(success1);
-    }
-
-
 
 }

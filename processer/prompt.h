@@ -6,6 +6,7 @@
 #include "../utils/processmat.h"
 #include "../utils/print.h"
 #include "signals.h"
+#include "bgprocess.h"
 
 void initialize();
 void prompt_print();

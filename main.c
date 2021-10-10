@@ -13,8 +13,6 @@ int main() {
     while(!0){
 
         fg_run[0]->pid = -1;
-        print_finished_bgprocess();
-
         // check if any bg processes are still running
         if(run[0]->name[0] == '\0')
             is_bg = 0;

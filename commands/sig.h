@@ -5,6 +5,7 @@
 #include "../utils/processmat.h"
 #include "../utils/inputmat.h"
 #include "../utils/print.h"
+#include "../processer/bgprocess.h"
 
 void command_sig(token_mat arg);
 
