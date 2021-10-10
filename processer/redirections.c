@@ -1,15 +1,17 @@
 #include "redirections.h"
 
 void redirections(token_mat arg,long int repeat){
-    char *input_file = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
-    char *output_file = malloc(sizeof(char)*MAX_TOKEN_LENGTH);
+    char *input_file = malloc(sizeof(char)*MAX_TOKEN_LENGTH);       // input-redirection file
+    char *output_file = malloc(sizeof(char)*MAX_TOKEN_LENGTH);      // output-redirection file
 
     token_mat command;
     command = make_args_mat();
 
     int command_num = 0;
     int mode = 0;
-    int append = 0;
+    int append = 0; // >>
+
+    // get the command , input_file and output_file
     for (int i = 0; i <= arg.num_args ; i++) {
         if (strcmp(arg.args[i],"<") == 0)
             mode = 1;
@@ -47,7 +49,7 @@ void redirections(token_mat arg,long int repeat){
             free(error1);
             return;
         }
-        dup2(fd_in,STDIN_FILENO);
+        dup2(fd_in,STDIN_FILENO);       // if input-redirection file present , then change the STDIN fd to fd_in
     }
 
     if(strlen(output_file) != 0){
@@ -65,10 +67,10 @@ void redirections(token_mat arg,long int repeat){
             free(error1);
             return;
         }
-        dup2(fd_out,STDOUT_FILENO);
+        dup2(fd_out,STDOUT_FILENO);     // if output-redirection file present , then change the STDOUT fd to fd_out
     }
 
-    execute(command,repeat);
+    execute(command,repeat);            // execute the given command
 
     if(fd_in >= 0)
         close(fd_in);

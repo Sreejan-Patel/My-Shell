@@ -1,5 +1,6 @@
 #include "jobs.h"
 
+// prints the status of the jobs
 void command_jobs(token_mat arg){
     if(arg.num_args > 1){
         char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
@@ -74,6 +75,7 @@ void command_jobs(token_mat arg){
             }
         }
     }
+    // sorting alphabetically
     char temp[MAX_TOKEN_LENGTH];
     for(int i = 0 ; i < count ; i++){
         for(int j = i+1 ; j < count ; j++){

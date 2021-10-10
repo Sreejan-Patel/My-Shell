@@ -3,6 +3,7 @@
 void pipeline(token_mat arg,long int repeat){
     int pipe_num = 0;
 
+    // check no of pipes
     for(int i = 0 ; i <= arg.num_args ; i++){
         if(strcmp(arg.args[i],"|") == 0)
             pipe_num++;
@@ -15,6 +16,8 @@ void pipeline(token_mat arg,long int repeat){
 
     int pipe_mode = 0;
     int j = 0;
+
+    // get the commands
     for(int i = 0 ; i <= arg.num_args ; i++){
         if(strcmp(arg.args[i],"|") == 0){
             command[pipe_mode].num_args = j - 1;
@@ -43,6 +46,7 @@ void pipeline(token_mat arg,long int repeat){
     int fd_in = 0;
 
     for(int i = 0 ; i <= pipe_num ; i++){
+        // pipe
         if(pipe(fd) < 0){
             char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
             sprintf(error1,"Error: Could Not Create Pipeline\n");
@@ -60,9 +64,9 @@ void pipeline(token_mat arg,long int repeat){
             return;
         }
         else if (pid == 0) {
-            dup2(fd_in, STDIN_FILENO);
+            dup2(fd_in, STDIN_FILENO);      // close stdin and redirect input from pipe
             if (i != (pipe_num))
-                dup2(fd[1], STDOUT_FILENO);
+                dup2(fd[1], STDOUT_FILENO); // while there are more commands close stdout and redirect output to pipe
             close(fd[0]);
             redirections(command[i],repeat);
             exit(0);

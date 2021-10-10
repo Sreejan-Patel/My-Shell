@@ -1,7 +1,6 @@
 #include "cd.h"
 
 // executes the cd command as specified
-
 void command_cd(token_mat arg){
 
     // cd can have only 1 argument

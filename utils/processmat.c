@@ -1,7 +1,6 @@
 #include "processmat.h"
 
-// creates a array of pointer to struct process , which store the name and pid of the bgprocess
-
+// creates an array of pointers to struct process , which store the name and pid of the bgprocess
 void make_bgprocess_mat(){
 
     process **p;
@@ -12,6 +11,7 @@ void make_bgprocess_mat(){
     run = p;
 }
 
+// creates 1 array of pointer to struct process , which store the name and pid of the fgprocess
 void make_fgprocess_mat(){
     process **f;
     f = (process**)malloc(sizeof(process*));

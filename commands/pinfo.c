@@ -1,7 +1,6 @@
 #include "pinfo.h"
 
 // gets the info of the process specified
-
 void command_pinfo(token_mat arg){
 
     if(!arg.num_args){
@@ -54,6 +53,7 @@ void command_pinfo(token_mat arg){
 
 }
 
+// gets the status of the process
 char* status(char* pid){
     char status[MAX_TOKEN_LENGTH];
     strcpy(status,"/proc/");
@@ -83,6 +83,7 @@ char* status(char* pid){
     return strtok(NULL, " ");
 }
 
+// gets the virtual memory used by the procss
 char* memory(char* pid){
     char memory[MAX_TOKEN_LENGTH];
     strcpy(memory,"/proc/");
@@ -110,6 +111,7 @@ char* memory(char* pid){
 
 }
 
+// gets the executable path of the process
 char* exe(char* pid){
     char exe[MAX_TOKEN_LENGTH];
     strcpy(exe,"/proc/");

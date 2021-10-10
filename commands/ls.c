@@ -1,7 +1,6 @@
 #include "ls.h"
 
 // executes the commands ls with many of it's flags
-
 void command_ls(token_mat arg){
     int flag_l = 0;
     int flag_a = 0;
@@ -433,7 +432,6 @@ void ls_l(char* path,int flag_a){
 }
 
 // gets the total block size
-
 long long int get_block_size(char* directory,int flag_a) {
     long long int size = 0;
 

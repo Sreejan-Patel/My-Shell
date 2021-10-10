@@ -1,5 +1,6 @@
 #include "bg.h"
 
+// resumes a stopped bgprocess
 void command_bg(token_mat arg){
     if(arg.num_args != 1){
         char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
@@ -33,11 +34,11 @@ void command_bg(token_mat arg){
     char* stat = status(pid);
     if(stat == NULL)
         return;
-    if(strcmp(stat,"R") == 0 || strcmp(stat,"S") == 0){
+    if(strcmp(stat,"R") == 0 || strcmp(stat,"S") == 0){         // do nothing if already running
         printf(ANSI_GREEN_BOLD"The Background process is already Running\n"ANSI_DEFAULT);
         return;
     }
-    if(kill(job_pid, SIGCONT) < 0){
+    if(kill(job_pid, SIGCONT) < 0){     // continues the stopped bgprocess
         char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
         sprintf(error1,"Error: bg - kill:SIGCONT\n");
         error(error1);

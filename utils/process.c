@@ -1,5 +1,6 @@
 #include "process.h"
 
+// adds incoming bgprocess to run/jobs
 void add_process(token_mat arg,int child){
     int j;
     for(j = 0 ; j < MAX_TOKENS ; j++){
@@ -24,6 +25,7 @@ void add_process(token_mat arg,int child){
     }
 }
 
+// deletes the job after completion/termination
 void delete_process(int job_number){
     for(int j = job_number; j < MAX_TOKENS-1 ; j++){
         strcpy(run[j]->name,run[j+1]->name);
@@ -33,6 +35,7 @@ void delete_process(int job_number){
     run[MAX_TOKENS-1]->pid = 0;
 }
 
+// adds a fgprocess to bgprocesses(run)/jobs when ctrl-z occurs
 void add_fgprocess(){
     int i;
     for(i = 0 ; i < MAX_TOKENS ; i++){

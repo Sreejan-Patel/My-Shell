@@ -1,7 +1,6 @@
 #include "inputmat.h"
 
 // creates a arg matrix which stores the input arg
-
 token_mat make_args_mat(){
     token_mat args_mat;
 

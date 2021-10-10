@@ -1,5 +1,6 @@
 #include "fg.h"
 
+// brings a stopped or running bgprocess to fg
 void command_fg(token_mat arg){
     if(arg.num_args != 1){
         char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
@@ -38,7 +39,6 @@ void command_fg(token_mat arg){
     signal(SIGTTIN, SIG_IGN);
     signal(SIGTTOU, SIG_IGN);
 
-    // It is already a separate group
     // make the job's process group the foreground process group
     tcsetpgrp(STDIN_FILENO, job_pid);
 
@@ -64,14 +64,14 @@ void command_fg(token_mat arg){
     signal(SIGTTIN, SIG_DFL);
     signal(SIGTTOU, SIG_DFL);
 
-    if(WIFSTOPPED(stat)){
+    if(WIFSTOPPED(stat)){       // ctrl-z
         char *alert2 = malloc(sizeof(char)*MAX_NAME_LENGTH);
         sprintf(alert2,"\tAlert: %s process with ID %d has been stopped by CTRL-Z\n",fg_run[0]->name,job_pid);
         alert(alert2);
         free(alert2);
         add_fgprocess();
     }
-    else if(WIFSIGNALED(stat)){
+    else if(WIFSIGNALED(stat)){     // any signal
         char *alert2 = malloc(sizeof(char)*MAX_NAME_LENGTH);
         sprintf(alert2,"\tAlert: %s process with ID %d has received a signal %d\n",fg_run[0]->name,job_pid, WTERMSIG(stat));
         alert(alert2);

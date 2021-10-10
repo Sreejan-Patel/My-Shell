@@ -1,5 +1,6 @@
 #include "sig.h"
 
+// sends a signal to specified job using kill
 void command_sig(token_mat arg){
     if(arg.num_args != 2){
         char *error1 = malloc(sizeof(char)*MAX_NAME_LENGTH);

@@ -1,21 +1,13 @@
 #include "util.h"
 
-/*
-consists of the following -
-    -clearscreen : clears the terminal screen
-    -get_user_name : gets the username operating the system
-    -get_system_name : gets the systemname
-    -get_curr_path() : gets the current path
-    -get_relative_path() : gets the relative path w.r.t shell path
-*/
-
-
+// clear screen and prints the welcome message
 void clear_screen(){
     const char *CLEAR_SCREEN_ANSI = "\e[1;1H\e[2J";
     write(STDOUT_FILENO, CLEAR_SCREEN_ANSI, strlen(CLEAR_SCREEN_ANSI));
     printf(ANSI_YELLOW_BOLD "\n\t\t\t\t\t\t\t\t---\tWelcome To My_Shell\t---\t\t\t\t\t\t\t\t\n" ANSI_DEFAULT);
 }
 
+// gets the username
 char* get_user_name(){
     user_name = malloc(sizeof(char)*MAX_NAME_LENGTH);
     struct passwd *user = getpwuid(getuid());
@@ -24,6 +16,7 @@ char* get_user_name(){
     return user_name;
 }
 
+// gets the system name
 char* get_system_name(){
 
     int flag;
@@ -53,7 +46,7 @@ char* get_system_name(){
 
 }
 
-
+// gets the current path
 char* get_curr_path(){
     curr_path = malloc(sizeof(char)*MAX_PATH_LENGTH);
     getcwd(curr_path,MAX_PATH_LENGTH);
@@ -61,6 +54,7 @@ char* get_curr_path(){
     return curr_path;
 }
 
+// gets the relative path w.r.t shell path
 char* get_relative_path(char* current_path){
     char* relative_path;
     relative_path = malloc(sizeof(char)*MAX_PATH_LENGTH);

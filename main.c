@@ -1,17 +1,16 @@
 #include "globals.h"
 #include "processer/prompt.h"
 #include "processer/tokenizer.h"
-#include "processer/bgprocess.h"
 
 int main() {
-    clear_screen();
-    initialize();
+    clear_screen(); // clears the screen
+    initialize();   // initialize the necessary functions
     int i;
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "EndlessLoop"
     while(!0){
-
+        // since the terminal regains control only after a fg process if complete
         fg_run[0]->pid = -1;
         // check if any bg processes are still running
         if(run[0]->name[0] == '\0')
@@ -29,6 +28,7 @@ int main() {
         i = 0;
         while (1) {
             temp = (char)getchar();
+            // '\377' character identifies CTRL-D
             if(temp == '\377'){
                 char *exit1 = malloc(sizeof(char)*MAX_NAME_LENGTH);
                 sprintf(exit1,"Exiting -- My_Shell");
@@ -43,7 +43,7 @@ int main() {
                 break;
             }
         }
-
+        // tokenize input
         tokenize_input(input);
 
     }

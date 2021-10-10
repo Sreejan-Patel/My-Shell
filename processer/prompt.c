@@ -1,7 +1,6 @@
 #include "prompt.h"
 
-// initializes the shell_path , prev_path , shell , in_shell and bgprocessmat
-
+// initializes the shell_path , prev_path , shell , in_shell , bgprocessmat , fgprocessmat and signals
 void initialize(){
     shell_path = (char*)malloc(sizeof(char)*MAX_PATH_LENGTH);
     getcwd(shell_path,MAX_PATH_LENGTH);
@@ -21,7 +20,7 @@ void initialize(){
     signal(SIGCHLD,print_finished_bgprocess);
 }
 
-// prints the prompt as specified and if there is any bgprocess running a smiley face lets you know
+// prints the prompt as specified and if there is any bgprocess adds an extra arrow at the end
 
 void prompt_print(){
 

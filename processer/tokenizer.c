@@ -1,15 +1,11 @@
 #include "tokenizer.h"
-/*
-    -first tokenizes the input w.r.t ;
-    -second tokenizes the input w.r.t " " and "\t"
-    -sends the second tokenized values to execute , to execute the req commands
-*/
+
 void tokenize_input(char *input){
     token_mat args_mat;
     args_mat = make_args_mat();
 
     char *token;
-    token = strtok(input,";");
+    token = strtok(input,";");  // tokenize ;
     int i = 0;
 
     while (token != NULL) // store the tokenized string in a token matrix
@@ -19,7 +15,7 @@ void tokenize_input(char *input){
         i++;
     }
 
-    args_mat.num_args = i - 1; // number of different commands
+    args_mat.num_args = i - 1; // number of arguments of the command
     args_mat.args[i] = token;
 
     tokenize(args_mat);
@@ -37,6 +33,9 @@ void tokenize(token_mat args_mat){
         int j = 0;
         long int repeat = 0;
         int is_repeat = 0;
+
+        // removes the repeat token and stores the repeat_value
+        // tokenize input
         while(token != NULL){
             if(strcmp(token,"repeat") == 0){
                 is_repeat++;
@@ -61,10 +60,10 @@ void tokenize(token_mat args_mat){
             j++;
         }
 
-        arg.num_args = j - 1;
+        arg.num_args = j - 1;   // number of arguments of the command
         arg.args[j] = token;
 
-
+        // checks for redirections and pipeline
         int mode = 0;
         for(int k = 0 ; k <= arg.num_args ; k++){
             if(strcmp(arg.args[k],"<") == 0){
@@ -89,12 +88,15 @@ void tokenize(token_mat args_mat){
             redirections(arg,repeat);
             return;
         }
-
-        execute(arg,repeat);
+        else
+            execute(arg,repeat);
 
     }
 }
 
+// executes the given command
+// checks for inbuilt-commands
+// else execvp
 void execute(token_mat arg,long int repeat){
     long int n = repeat;
     if(!n){
